@@ -114,7 +114,7 @@ Thank you.`;
                 description="Contact Dr. Peter Waweru for clinical consultations, research collaborations, speaking engagements, media inquiries, partnerships, and professional correspondence."
                 path="/contact"
             />
-            <section className="relative overflow-hidden bg-slate-950 py-10 md:py-20 text-white">
+            <section className="relative overflow-hidden bg-slate-950 py-5 md:py-20 text-white">
                 <div className="absolute inset-0 opacity-20">
                     <div className="absolute left-10 top-20 h-80 w-80 rounded-full bg-teal-500 blur-3xl" />
                     <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-yellow-500/30 blur-3xl" />
@@ -134,29 +134,28 @@ Thank you.`;
                 </div>
             </section>
 
-            <section className="bg-teal-50 py-10 md:py-20">
+            <section className="bg-teal-50 py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="rounded-3xl border border-teal-100 bg-white p-4 md:p-8">
                         <div className="flex flex-col gap-5 md:flex-row md:items-start">
-                            <AlertTriangle className="h-8 w-8 shrink-0 text-teal-700" />
-                            <div>
+                            <div className="flex items-center gap-4">
+                                <AlertTriangle className="h-8 w-8 shrink-0 text-teal-700" />
                                 <h2 className="text-2xl font-bold text-slate-950">
                                     Medical Emergency Notice
                                 </h2>
-                                <p className="mt-3 leading-7 text-slate-600">
-                                    If you or someone near you is experiencing sudden weakness,
-                                    speech difficulty, severe headache, loss of balance, vision
-                                    changes, or any urgent medical symptoms, please seek immediate
-                                    emergency care from the nearest hospital or emergency medical
-                                    service.
-                                </p>
                             </div>
+                            <p className="mt-3 leading-7 text-slate-600">
+                                If you or someone near you is experiencing sudden weakness, speech
+                                difficulty, severe headache, loss of balance, vision changes, or any
+                                urgent medical symptoms, please seek immediate emergency care from
+                                the nearest hospital or emergency medical service.
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -190,10 +189,13 @@ Thank you.`;
                                                 : "border-slate-200 bg-white"
                                         }`}
                                     >
-                                        <Icon className="h-7 w-7 text-teal-700" />
-                                        <h3 className="mt-4 text-lg font-bold text-slate-950">
-                                            {category.title}
-                                        </h3>
+                                        <div className="flex items-center gap-3">
+                                            <Icon className="h-7 w-7 shrink-0 text-teal-700" />
+
+                                            <h3 className="text-lg font-bold text-slate-950">
+                                                {category.title}
+                                            </h3>
+                                        </div>
                                         <p className="mt-2 text-sm leading-6 text-slate-600">
                                             {category.description}
                                         </p>
@@ -206,10 +208,13 @@ Thank you.`;
                     <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-4 md:p-8">
                         <div className="rounded-[1.5rem] bg-white p-4 md:p-8">
                             <div className="mb-8">
-                                <MessageCircle className="h-9 w-9 text-teal-700" />
-                                <h2 className="mt-5 text-3xl font-bold text-slate-950">
-                                    Send WhatsApp Inquiry
-                                </h2>
+                                <div className="flex items-center gap-4">
+                                    <MessageCircle className="h-9 w-9 shrink-0 text-teal-700" />
+
+                                    <h2 className="text-3xl font-bold text-slate-950">
+                                        Send WhatsApp Inquiry
+                                    </h2>
+                                </div>
                                 <p className="mt-3 leading-7 text-slate-600">
                                     Complete the form below. When you submit, WhatsApp will open
                                     with a prepared message addressed to Dr. Waweru.
@@ -329,7 +334,7 @@ Thank you.`;
                 </div>
             </section>
 
-            <section className="bg-teal-700 py-10 md:py-20 text-white">
+            <section className="bg-teal-700 py-5 md:py-20 text-white">
                 <div className="mx-auto max-w-4xl px-5 text-center lg:px-8">
                     <User className="mx-auto h-10 w-10 text-teal-100" />
                     <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl">

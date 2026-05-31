@@ -99,7 +99,7 @@ const Home = () => {
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,118,110,0.22),transparent_34%),linear-gradient(135deg,rgba(15,23,42,1),rgba(2,6,23,1))]" />
                 </div>
 
-                <div className="relative mx-auto grid min-h-[calc(100vh-96px)] max-w-7xl items-center gap-8 md:gap-14 px-5 py-10 md:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
+                <div className="relative mx-auto grid min-h-[calc(100vh-96px)] max-w-7xl items-center gap-8 md:gap-14 px-5 py-5 md:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
                     <div>
                         <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-teal-200 backdrop-blur">
                             Stroke Care • Neurosurgery • Research
@@ -225,7 +225,7 @@ const Home = () => {
             </section>
 
             {/* Professional Snapshot */}
-            <section className="bg-slate-50 py-10 md:py-20">
+            <section className="bg-slate-50 py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="grid gap-6 md:grid-cols-3">
                         {snapshotCards.map((card) => {
@@ -236,12 +236,15 @@ const Home = () => {
                                     key={card.title}
                                     className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/5"
                                 >
-                                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
-                                        <Icon className="h-6 w-6" />
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
+                                            <Icon className="h-6 w-6" />
+                                        </div>
+
+                                        <h3 className="text-2xl font-bold text-slate-950">
+                                            {card.title}
+                                        </h3>
                                     </div>
-                                    <h3 className="text-2xl font-bold text-slate-950">
-                                        {card.title}
-                                    </h3>
                                     <p className="mt-4 leading-7 text-slate-600">
                                         {card.description}
                                     </p>
@@ -253,7 +256,7 @@ const Home = () => {
             </section>
 
             {/* About */}
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -291,7 +294,7 @@ const Home = () => {
             </section>
 
             {/* Areas of Expertise */}
-            <section className="bg-slate-950 py-10 md:py-20 text-white">
+            <section className="bg-slate-950 py-5 md:py-20 text-white">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-300">
@@ -311,10 +314,13 @@ const Home = () => {
                                     key={area.title}
                                     className="rounded-3xl border border-white/10 bg-white/[0.04] p-7"
                                 >
-                                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-400/10 text-teal-300">
-                                        <Icon className="h-6 w-6" />
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-400/10 text-teal-300">
+                                            <Icon className="h-6 w-6" />
+                                        </div>
+
+                                        <h3 className="text-xl font-bold">{area.title}</h3>
                                     </div>
-                                    <h3 className="text-xl font-bold">{area.title}</h3>
                                     <p className="mt-4 text-sm leading-6 text-slate-300">
                                         {area.description}
                                     </p>
@@ -326,7 +332,7 @@ const Home = () => {
             </section>
 
             {/* Research & Impact */}
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-2 lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -373,7 +379,7 @@ const Home = () => {
             </section>
 
             {/* Appointments */}
-            <section className="bg-slate-50 py-10 md:py-20">
+            <section className="bg-slate-50 py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -388,7 +394,7 @@ const Home = () => {
                         {appointments.map((item) => (
                             <div
                                 key={item.institution}
-                                className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
+                                className="rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm"
                             >
                                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">
                                     {item.role}
@@ -403,9 +409,9 @@ const Home = () => {
             </section>
 
             {/* Stroke Awareness */}
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:px-8">
-                    <div className="rounded-[2rem] bg-gradient-to-br from-teal-700 to-slate-950 p-8 text-white">
+                    <div className="rounded-[1.5rem] bg-gradient-to-br from-teal-700 to-slate-950 p-4 md:p-8 text-white">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-200">
                             Stroke Warning Signs
                         </p>
@@ -453,7 +459,7 @@ const Home = () => {
             </section>
 
             {/* Collaboration & Speaking */}
-            <section className="bg-slate-950 py-10 md:py-20 text-white">
+            <section className="bg-slate-950 py-5 md:py-20 text-white">
                 <div className="mx-auto max-w-7xl px-5 text-center lg:px-8">
                     <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-300">
                         Collaboration & Speaking
@@ -485,7 +491,7 @@ const Home = () => {
             </section>
 
             {/* Contact CTA */}
-            <section className="bg-teal-700 py-10 md:py-20 text-white">
+            <section className="bg-teal-700 py-5 md:py-20 text-white">
                 <div className="mx-auto max-w-4xl px-5 text-center lg:px-8">
                     <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-100">
                         Contact

@@ -104,7 +104,7 @@ const Awareness = () => {
                 path="/stroke-awareness"
             />
 
-            <section className="relative overflow-hidden bg-slate-950 py-10 md:py-20 text-white">
+            <section className="relative overflow-hidden bg-slate-950 py-5 md:py-20 text-white">
                 <div className="absolute inset-0 opacity-20">
                     <div className="absolute left-10 top-20 h-80 w-80 rounded-full bg-teal-500 blur-3xl" />
                     <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-yellow-500/30 blur-3xl" />
@@ -156,17 +156,20 @@ const Awareness = () => {
                 </div>
             </section>
 
-            <section id="warning-signs" className="py-16">
+            <section id="warning-signs" className="py-4 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="rounded-[2rem] border border-teal-100 bg-teal-50 p-4 md:p-8 md:p-10">
                         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
                             <div>
-                                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-700 text-white">
-                                    <AlertTriangle className="h-7 w-7" />
+                                <div className="flex items-center gap-4">
+                                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-teal-700 text-white">
+                                        <AlertTriangle className="h-7 w-7" />
+                                    </div>
+
+                                    <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+                                        Stroke is a medical emergency.
+                                    </h2>
                                 </div>
-                                <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
-                                    Stroke is a medical emergency.
-                                </h2>
                                 <p className="mt-5 leading-8 text-slate-700">
                                     The earlier a stroke is recognized and treated, the greater the
                                     chance of recovery. If you suspect stroke, seek emergency
@@ -189,7 +192,7 @@ const Awareness = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-50 py-10 md:py-20">
+            <section className="bg-slate-50 py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -209,12 +212,15 @@ const Awareness = () => {
                                     key={item.title}
                                     className="rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/5"
                                 >
-                                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
-                                        <Icon className="h-6 w-6" />
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
+                                            <Icon className="h-6 w-6" />
+                                        </div>
+
+                                        <h3 className="text-xl font-bold text-slate-950">
+                                            {item.title}
+                                        </h3>
                                     </div>
-                                    <h3 className="text-xl font-bold text-slate-950">
-                                        {item.title}
-                                    </h3>
                                     <p className="mt-4 text-sm leading-6 text-slate-600">
                                         {item.description}
                                     </p>
@@ -225,7 +231,7 @@ const Awareness = () => {
                 </div>
             </section>
 
-            <section id="upesi" className="py-10 md:py-20">
+            <section id="upesi" className="py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -245,9 +251,12 @@ const Awareness = () => {
                         </p>
                     </div>
 
-                    <div className="rounded-[2rem] bg-gradient-to-br from-slate-950 to-teal-950 p-4 md:p-8 text-white shadow-xl">
-                        <Languages className="h-10 w-10 text-teal-300" />
-                        <h3 className="mt-6 text-3xl font-bold">UPESI</h3>
+                    <div className="rounded-[1.5rem] bg-gradient-to-br from-slate-950 to-teal-950 p-4 md:p-8 text-white shadow-xl">
+                        <div className="flex items-center gap-4">
+                            <Languages className="h-10 w-10 shrink-0 text-teal-300" />
+
+                            <h3 className="text-3xl font-bold">UPESI</h3>
+                        </div>
                         <p className="mt-3 text-slate-300">
                             A local-language approach to stroke recognition and emergency response.
                         </p>
@@ -271,7 +280,7 @@ const Awareness = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-950 py-10 md:py-20 text-white">
+            <section className="bg-slate-950 py-5 md:py-20 text-white">
                 <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-300">
@@ -309,7 +318,7 @@ const Awareness = () => {
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -326,10 +335,11 @@ const Awareness = () => {
                                 key={resource}
                                 className="rounded-3xl border border-slate-200 bg-slate-50 p-4 md:p-8 shadow-sm"
                             >
-                                <Download className="h-8 w-8 text-teal-700" />
-                                <h3 className="mt-5 text-xl font-bold text-slate-950">
-                                    {resource}
-                                </h3>
+                                <div className="flex items-center gap-4">
+                                    <Download className="h-8 w-8 shrink-0 text-teal-700" />
+
+                                    <h3 className="text-xl font-bold text-slate-950">{resource}</h3>
+                                </div>
                                 <p className="mt-3 text-sm leading-6 text-slate-600">
                                     Resource file to be added after content approval.
                                 </p>
@@ -339,7 +349,7 @@ const Awareness = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-50 py-10 md:py-20">
+            <section className="bg-slate-50 py-5 md:py-20">
                 <div className="mx-auto max-w-4xl px-5 lg:px-8">
                     <div className="text-center">
                         <HelpCircle className="mx-auto h-10 w-10 text-teal-700" />
@@ -362,7 +372,7 @@ const Awareness = () => {
                 </div>
             </section>
 
-            <section className="bg-teal-700 py-10 md:py-20 text-white">
+            <section className="bg-teal-700 py-5 md:py-20 text-white">
                 <div className="mx-auto max-w-4xl px-5 text-center lg:px-8">
                     <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
                         Invite Dr. Waweru for stroke awareness programs.

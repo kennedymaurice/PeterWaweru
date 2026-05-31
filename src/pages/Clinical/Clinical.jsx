@@ -81,7 +81,7 @@ const Clinical = () => {
                 path="/clinical-expertise"
                 schema={personPhysicianSchema}
             />
-            <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 py-10 md:py-20 text-white">
+            <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 py-5 md:py-20 text-white">
                 <div className="absolute inset-0 opacity-20">
                     <div className="absolute left-10 top-20 h-80 w-80 rounded-full bg-teal-500 blur-3xl" />
                     <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-yellow-500/30 blur-3xl" />
@@ -119,7 +119,7 @@ const Clinical = () => {
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -143,14 +143,17 @@ const Clinical = () => {
                             return (
                                 <div
                                     key={area.title}
-                                    className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/5"
+                                    className="rounded-3xl border border-slate-200 bg-white p-4 md:8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/5"
                                 >
-                                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
-                                        <Icon className="h-6 w-6" />
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
+                                            <Icon className="h-6 w-6" />
+                                        </div>
+
+                                        <h3 className="text-2xl font-bold text-slate-950">
+                                            {area.title}
+                                        </h3>
                                     </div>
-                                    <h3 className="text-2xl font-bold text-slate-950">
-                                        {area.title}
-                                    </h3>
                                     <p className="mt-4 leading-7 text-slate-600">
                                         {area.description}
                                     </p>
@@ -161,7 +164,7 @@ const Clinical = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-50 py-10 md:py-20">
+            <section className="bg-slate-50 py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -178,7 +181,7 @@ const Clinical = () => {
                         </p>
                     </div>
 
-                    <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+                    <div className="rounded-[2rem] border border-slate-200 bg-white p-4 md:p-8 shadow-sm">
                         <div className="mb-6 flex items-center gap-3">
                             <Users className="h-7 w-7 text-teal-700" />
                             <h3 className="text-2xl font-bold text-slate-950">
@@ -200,13 +203,16 @@ const Clinical = () => {
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl gap-6 px-5 lg:grid-cols-2 lg:px-8">
-                    <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-                        <HeartPulse className="h-8 w-8 text-teal-700" />
-                        <h2 className="mt-6 text-3xl font-bold text-slate-950">
-                            For Patients and Families
-                        </h2>
+                    <div className="rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm">
+                        <div className="flex items-center gap-4">
+                            <HeartPulse className="h-8 w-8 shrink-0 text-teal-700" />
+
+                            <h2 className="text-3xl font-bold text-slate-950">
+                                For Patients and Families
+                            </h2>
+                        </div>
                         <p className="mt-4 leading-7 text-slate-600">
                             Neurological illnesses can be overwhelming for patients and their loved
                             ones. Dr. Waweru is committed to ensuring that patients and families
@@ -222,9 +228,11 @@ const Clinical = () => {
                         </ul>
                     </div>
 
-                    <div className="rounded-3xl border border-slate-200 bg-slate-950 p-8 text-white shadow-sm">
-                        <ClipboardCheck className="h-8 w-8 text-teal-300" />
-                        <h2 className="mt-6 text-3xl font-bold">For Referring Clinicians</h2>
+                    <div className="rounded-3xl border border-slate-200 bg-slate-950 p-4 md:p-8 text-white shadow-sm">
+                        <div className="flex items-center gap-4">
+                            <ClipboardCheck className="h-8 w-8 shrink-0 text-teal-300" />
+                            <h2 className="text-3xl font-bold">For Referring Clinicians</h2>
+                        </div>
                         <p className="mt-4 leading-7 text-slate-300">
                             Dr. Waweru welcomes referrals and professional collaboration for
                             patients requiring specialist assessment or management of stroke and
@@ -253,27 +261,28 @@ const Clinical = () => {
                 </div>
             </section>
 
-            <section className="bg-teal-50 py-10 md:py-20">
+            <section className="bg-teal-50 py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="rounded-3xl border border-teal-100 bg-white p-8 md:p-10">
+                    <div className="rounded-3xl border border-teal-100 bg-white p-4 md:p-8">
                         <div className="flex flex-col gap-5 md:flex-row md:items-start">
-                            <AlertTriangle className="h-8 w-8 shrink-0 text-teal-700" />
-                            <div>
+                            <div className="flex items-center gap-4">
+                                <AlertTriangle className="h-8 w-8 shrink-0 text-teal-700" />
+
                                 <h2 className="text-2xl font-bold text-slate-950">
                                     Medical Emergency Notice
                                 </h2>
-                                <p className="mt-3 leading-7 text-slate-600">
-                                    Stroke symptoms and sudden neurological changes may represent a
-                                    medical emergency. For urgent symptoms, seek immediate emergency
-                                    care from the nearest hospital or emergency medical service.
-                                </p>
                             </div>
+                            <p className="mt-3 leading-7 text-slate-600">
+                                Stroke symptoms and sudden neurological changes may represent a
+                                medical emergency. For urgent symptoms, seek immediate emergency
+                                care from the nearest hospital or emergency medical service.
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="bg-teal-700 py-10 md:py-20 text-white">
+            <section className="bg-teal-700 py-5 md:py-20 text-white">
                 <div className="mx-auto max-w-4xl px-5 text-center lg:px-8">
                     <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-50">
                         Clinical Philosophy

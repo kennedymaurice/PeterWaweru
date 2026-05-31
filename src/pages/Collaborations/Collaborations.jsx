@@ -111,7 +111,7 @@ const Collaborations = () => {
                 description="Explore partnership opportunities with Dr. Peter Waweru in stroke research, health systems strengthening, medical education, public health, and health equity."
                 path="/collaborations"
             />
-            <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 py-10 md:py-20 text-white">
+            <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 py-5 md:py-20 text-white">
                 <div className="absolute inset-0 opacity-20">
                     <div className="absolute left-10 top-20 h-80 w-80 rounded-full bg-teal-500 blur-3xl" />
                     <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-yellow-500/30 blur-3xl" />
@@ -150,7 +150,7 @@ const Collaborations = () => {
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -176,12 +176,15 @@ const Collaborations = () => {
                                     key={area.title}
                                     className="rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/5"
                                 >
-                                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
-                                        <Icon className="h-6 w-6" />
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
+                                            <Icon className="h-6 w-6" />
+                                        </div>
+
+                                        <h3 className="text-2xl font-bold text-slate-950">
+                                            {area.title}
+                                        </h3>
                                     </div>
-                                    <h3 className="text-2xl font-bold text-slate-950">
-                                        {area.title}
-                                    </h3>
                                     <p className="mt-4 leading-7 text-slate-600">
                                         {area.description}
                                     </p>
@@ -192,7 +195,7 @@ const Collaborations = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-50 py-10 md:py-20">
+            <section className="bg-slate-50 py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -214,15 +217,18 @@ const Collaborations = () => {
                                 key={partner}
                                 className="rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm"
                             >
-                                <Building2 className="h-7 w-7 text-teal-700" />
-                                <h3 className="mt-5 text-xl font-bold text-slate-950">{partner}</h3>
+                                <div className="flex items-center gap-4">
+                                    <Building2 className="h-7 w-7 shrink-0 text-teal-700" />
+
+                                    <h3 className="text-xl font-bold text-slate-950">{partner}</h3>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -246,7 +252,7 @@ const Collaborations = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-950 py-10 md:py-20 text-white">
+            <section className="bg-slate-950 py-5 md:py-20 text-white">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-300">
@@ -266,8 +272,11 @@ const Collaborations = () => {
                                     key={principle.title}
                                     className="rounded-3xl border border-white/10 bg-white/[0.05] p-4 md:p-8"
                                 >
-                                    <Icon className="h-8 w-8 text-teal-300" />
-                                    <h3 className="mt-5 text-xl font-bold">{principle.title}</h3>
+                                    <div className="flex items-center gap-4">
+                                        <Icon className="h-8 w-8 shrink-0 text-teal-300" />
+
+                                        <h3 className="text-xl font-bold">{principle.title}</h3>
+                                    </div>
                                     <p className="mt-3 text-sm leading-6 text-slate-300">
                                         {principle.description}
                                     </p>
@@ -278,7 +287,7 @@ const Collaborations = () => {
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -321,7 +330,7 @@ const Collaborations = () => {
                 </div>
             </section>
 
-            <section className="bg-teal-700 py-10 md:py-20 text-white">
+            <section className="bg-teal-700 py-5 md:py-20 text-white">
                 <div className="mx-auto max-w-4xl px-5 text-center lg:px-8">
                     <Handshake className="mx-auto h-10 w-10 text-teal-100" />
                     <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl">

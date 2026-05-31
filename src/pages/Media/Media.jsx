@@ -98,7 +98,7 @@ const Media = () => {
                 path="/media"
                 schema={personPhysicianSchema}
             />
-            <section className="relative overflow-hidden bg-slate-950 py-10 md:py-20 text-white">
+            <section className="relative overflow-hidden bg-slate-950 py-5 md:py-20 text-white">
                 <div className="absolute inset-0 opacity-20">
                     <div className="absolute left-10 top-20 h-80 w-80 rounded-full bg-teal-500 blur-3xl" />
                     <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-yellow-500/30 blur-3xl" />
@@ -146,7 +146,7 @@ const Media = () => {
 
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
 
-                            <div className="absolute bottom-0 left-0 right-0 p-8">
+                            <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8">
                                 <p className="text-sm font-semibold uppercase tracking-[0.28em] text-teal-300">
                                     Speaking & Advocacy
                                 </p>
@@ -161,7 +161,7 @@ const Media = () => {
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -180,7 +180,7 @@ const Media = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-100 py-10 md:py-20">
+            <section className="bg-slate-100 py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                         <div className="max-w-3xl">
@@ -202,12 +202,15 @@ const Media = () => {
                                     key={topic.title}
                                     className="rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/5"
                                 >
-                                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
-                                        <Icon className="h-6 w-6" />
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
+                                            <Icon className="h-6 w-6" />
+                                        </div>
+
+                                        <h3 className="text-2xl font-bold text-slate-950">
+                                            {topic.title}
+                                        </h3>
                                     </div>
-                                    <h3 className="text-2xl font-bold text-slate-950">
-                                        {topic.title}
-                                    </h3>
                                     <p className="mt-4 leading-7 text-slate-600">
                                         {topic.description}
                                     </p>
@@ -218,7 +221,7 @@ const Media = () => {
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -243,10 +246,13 @@ const Media = () => {
                                     key={item.title}
                                     className="rounded-3xl border border-slate-200 bg-slate-50 p-4 md:p-8"
                                 >
-                                    <Icon className="h-7 w-7 text-teal-700" />
-                                    <h3 className="mt-5 text-xl font-bold text-slate-950">
-                                        {item.title}
-                                    </h3>
+                                    <div className="flex items-center gap-4">
+                                        <Icon className="h-7 w-7 shrink-0 text-teal-700" />
+
+                                        <h3 className="text-xl font-bold text-slate-950">
+                                            {item.title}
+                                        </h3>
+                                    </div>
                                 </div>
                             );
                         })}
@@ -254,7 +260,7 @@ const Media = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-950 py-10 md:py-20 text-white">
+            <section className="bg-slate-950 py-5 md:py-20 text-white">
                 <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-300">
@@ -299,7 +305,7 @@ const Media = () => {
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
                         <div>
@@ -322,8 +328,11 @@ const Media = () => {
                                     key={topic}
                                     className="rounded-2xl border border-slate-200 bg-slate-50 p-4 md:p-5 text-sm font-semibold text-slate-700"
                                 >
-                                    <Newspaper className="mb-4 h-5 w-5 text-teal-700" />
-                                    {topic}
+                                    <div className="flex items-center gap-3">
+                                        <Newspaper className="h-5 w-5 shrink-0 text-teal-700" />
+
+                                        <span>{topic}</span>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -331,7 +340,7 @@ const Media = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-100 py-10 md:py-20">
+            <section className="bg-slate-100 py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -355,7 +364,7 @@ const Media = () => {
                 </div>
             </section>
 
-            <section className="bg-teal-700 py-10 md:py-20 text-white">
+            <section className="bg-teal-700 py-5 md:py-20 text-white">
                 <div className="mx-auto max-w-4xl px-5 text-center lg:px-8">
                     <Mic className="mx-auto h-10 w-10 text-teal-100" />
                     <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl">

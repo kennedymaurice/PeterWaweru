@@ -79,7 +79,7 @@ const About = () => {
                 schema={personPhysicianSchema}
             />
 
-            <section className="relative overflow-hidden bg-slate-950 py-10 md:py-20 text-white">
+            <section className="relative overflow-hidden bg-slate-950 py-5 md:py-20 text-white">
                 <div className="absolute inset-0">
                     <div className="absolute -left-24 top-16 h-80 w-80 rounded-full bg-teal-600/25 blur-3xl" />
                     <div className="absolute -right-24 bottom-10 h-96 w-96 rounded-full bg-yellow-500/10 blur-3xl" />
@@ -177,7 +177,7 @@ const About = () => {
                     </div>
                 </div>
             </section>
-            <section className="bg-slate-50 py-10 md:py-20">
+            <section className="bg-slate-50 py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -197,12 +197,15 @@ const About = () => {
                                     key={item.title}
                                     className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
                                 >
-                                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
-                                        <Icon className="h-6 w-6" />
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
+                                            <Icon className="h-6 w-6" />
+                                        </div>
+
+                                        <h3 className="text-2xl font-bold text-slate-950">
+                                            {item.title}
+                                        </h3>
                                     </div>
-                                    <h3 className="text-2xl font-bold text-slate-950">
-                                        {item.title}
-                                    </h3>
                                     <p className="mt-3 leading-7 text-slate-600">
                                         {item.description}
                                     </p>
@@ -213,7 +216,7 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
                         <div>
@@ -231,15 +234,19 @@ const About = () => {
                                     key={item.institution}
                                     className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
                                 >
-                                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
-                                        <Building2 className="h-5 w-5" />
+                                    <div className="flex items-center gap-3">
+                                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
+                                            <Building2 className="h-5 w-5" />
+                                        </div>
+
+                                        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">
+                                            {item.role}
+                                        </p>
                                     </div>
-                                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">
-                                        {item.role}
-                                    </p>
-                                    <h3 className="mt-3 text-2xl font-bold text-slate-950">
+                                    <h3 className="mt-5 text-2xl font-bold text-slate-950">
                                         {item.institution}
                                     </h3>
+
                                     <p className="mt-4 leading-7 text-slate-600">
                                         {item.description}
                                     </p>
@@ -250,11 +257,16 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-950 py-10 md:py-20 text-white">
+            <section className="bg-slate-950 py-5 md:py-20 text-white">
                 <div className="mx-auto grid max-w-7xl gap-6 px-5 md:grid-cols-2 lg:px-8">
                     <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8">
-                        <HeartPulse className="h-8 w-8 text-teal-300" />
-                        <h2 className="mt-6 text-3xl font-bold">Mission</h2>
+                        <div className="flex items-center gap-4">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-500/10">
+                                <HeartPulse className="h-6 w-6 text-teal-300" />
+                            </div>
+
+                            <h2 className="text-3xl font-bold">Mission</h2>
+                        </div>
                         <p className="mt-4 leading-7 text-slate-300">
                             To advance stroke care through clinical excellence, research, education,
                             advocacy, and collaboration while strengthening healthcare systems and
@@ -263,8 +275,13 @@ const About = () => {
                     </div>
 
                     <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8">
-                        <Microscope className="h-8 w-8 text-teal-300" />
-                        <h2 className="mt-6 text-3xl font-bold">Vision</h2>
+                        <div className="flex items-center gap-4">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-500/10">
+                                <Microscope className="h-6 w-6 text-teal-300" />
+                            </div>
+
+                            <h2 className="text-3xl font-bold">Vision</h2>
+                        </div>
                         <p className="mt-4 leading-7 text-slate-300">
                             To contribute to a future where every person at risk of stroke has
                             access to timely diagnosis, evidence-based treatment, rehabilitation,
@@ -274,7 +291,7 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -298,7 +315,7 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="bg-teal-700 py-10 md:py-20 text-white">
+            <section className="bg-teal-700 py-5 md:py-20 text-white">
                 <div className="mx-auto max-w-4xl px-5 text-center lg:px-8">
                     <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-100">
                         WORK

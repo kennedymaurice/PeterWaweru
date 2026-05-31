@@ -109,7 +109,7 @@ const Publications = () => {
                 type="article"
                 schema={publicationsSchema}
             />
-            <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 py-10 md:py-20 text-white">
+            <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 py-5 md:py-20 text-white">
                 <div className="absolute inset-0 opacity-20">
                     <div className="absolute left-10 top-20 h-80 w-80 rounded-full bg-teal-500 blur-3xl" />
                     <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-yellow-500/30 blur-3xl" />
@@ -147,7 +147,7 @@ const Publications = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-50 py-16">
+            <section className="bg-slate-50 py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl gap-5 px-5 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
                     {stats.map((stat) => (
                         <div
@@ -164,7 +164,7 @@ const Publications = () => {
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                         <div className="max-w-3xl">
@@ -186,7 +186,7 @@ const Publications = () => {
                         {publications.map((publication) => (
                             <article
                                 key={publication.title}
-                                className="rounded-[2rem] border border-slate-200 bg-white p-4 md:p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/5"
+                                className="rounded-[1.5rem] border border-slate-200 bg-white p-4 md:p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/5"
                             >
                                 <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
                                     <div className="max-w-4xl">
@@ -273,7 +273,7 @@ const Publications = () => {
                 </div>
             </section>
 
-            <section className="bg-slate-950 py-10 md:py-20 text-white">
+            <section className="bg-slate-950 py-5 md:py-20 text-white">
                 <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-300">
@@ -294,15 +294,18 @@ const Publications = () => {
                                 key={category}
                                 className="rounded-2xl border border-white/10 bg-white/[0.05] p-5"
                             >
-                                <Tags className="mb-4 h-6 w-6 text-teal-300" />
-                                <h3 className="text-lg font-bold">{category}</h3>
+                                <div className="flex items-center gap-3">
+                                    <Tags className="h-6 w-6 shrink-0 text-teal-300" />
+
+                                    <h3 className="text-lg font-bold">{category}</h3>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            <section className="py-10 md:py-20">
+            <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
@@ -319,10 +322,11 @@ const Publications = () => {
                                 key={profile}
                                 className="rounded-3xl border border-slate-200 bg-slate-50 p-4 md:p-8 shadow-sm"
                             >
-                                <Globe2 className="h-8 w-8 text-teal-700" />
-                                <h3 className="mt-5 text-2xl font-bold text-slate-950">
-                                    {profile}
-                                </h3>
+                                <div className="flex items-center gap-4">
+                                    <Globe2 className="h-8 w-8 shrink-0 text-teal-700" />
+
+                                    <h3 className="text-2xl font-bold text-slate-950">{profile}</h3>
+                                </div>
                                 <p className="mt-3 leading-7 text-slate-600">
                                     External profile link to be added after verification.
                                 </p>
@@ -332,7 +336,7 @@ const Publications = () => {
                 </div>
             </section>
 
-            <section className="bg-teal-700 py-10 md:py-20 text-white">
+            <section className="bg-teal-700 py-5 md:py-20 text-white">
                 <div className="mx-auto max-w-4xl px-5 text-center lg:px-8">
                     <BookOpen className="mx-auto h-10 w-10 text-teal-100" />
                     <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl">
