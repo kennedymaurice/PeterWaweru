@@ -39,7 +39,7 @@ const Header = () => {
                     aria-label="Dr. Peter Waweru Homepage"
                 >
                     <img
-                        src="/logo-white.webp"
+                        src="/logo.webp"
                         alt="Dr. Peter Waweru"
                         className="h-14 w-auto object-contain md:h-16"
                     />
