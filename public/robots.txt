@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.peterwaweru.co.ke/sitemap.xml
