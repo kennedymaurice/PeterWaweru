@@ -26,7 +26,7 @@ const SplashScreen = () => {
                 }}
             >
                 <img
-                    src="/peter-waweru.png"
+                    src="/peter-waweru.webp"
                     alt="Dr. Peter Waweru Logo"
                     className="h-20 w-auto object-contain sm:h-24"
                 />

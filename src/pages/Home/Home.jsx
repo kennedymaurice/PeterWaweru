@@ -175,7 +175,7 @@ const Home = () => {
                         <div className="relative rounded-[2rem] border border-white/10 bg-white/10 p-3 shadow-2xl shadow-black/30 backdrop-blur">
                             <div className="relative overflow-hidden rounded-[1.5rem] bg-slate-900">
                                 <img
-                                    src="/peter-waweru.png"
+                                    src="/peter-waweru.webp"
                                     alt="Dr. Peter Kuria Waweru"
                                     className="h-[560px] w-full object-cover object-center"
                                 />

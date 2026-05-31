@@ -139,7 +139,7 @@ const Media = () => {
                     <div className="rounded-[2rem] border border-white/10 bg-white/[0.05] p-4 shadow-2xl shadow-black/20">
                         <div className="relative overflow-hidden rounded-[1.5rem]">
                             <img
-                                src="/peter-speaking.png"
+                                src="/peter-speaking.webp"
                                 alt="Dr. Peter Waweru speaking at a conference"
                                 className="h-[420px] w-full object-cover"
                             />

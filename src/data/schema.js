@@ -11,7 +11,7 @@ export const personPhysicianSchema = {
     description:
         "Dr. Peter Waweru is a vascular and endovascular neurosurgeon, stroke specialist, and researcher advancing stroke care, neurovascular health, and health equity across Kenya and Africa.",
     url: SITE_URL,
-    image: `${SITE_URL}/logo.png`,
+    image: `${SITE_URL}/logo.webp`,
     medicalSpecialty: [
         "Neurology",
         "Neurosurgery",

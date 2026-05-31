@@ -7,7 +7,7 @@ const SEO = ({
     title,
     description,
     path = "",
-    image = "/peter-waweru.png",
+    image = "/peter-waweru.webp",
     type = "website",
     schema,
 }) => {

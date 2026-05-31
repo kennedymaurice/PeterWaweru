@@ -45,7 +45,7 @@ const Footer = () => {
                 <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
                     {/* Brand */}
                     <div>
-                        <img src="/logo.png" alt="Dr. Peter Waweru" className="h-16 w-auto" />
+                        <img src="/logo.webp" alt="Dr. Peter Waweru" className="h-16 w-auto" />
 
                         <p className="mt-6 max-w-md text-sm leading-7 text-slate-300">
                             Vascular & Endovascular Neurosurgeon, Stroke Specialist, Researcher, and
