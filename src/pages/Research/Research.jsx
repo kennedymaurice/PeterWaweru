@@ -148,18 +148,45 @@ const Research = () => {
             </section>
 
             <section className="py-5 md:py-20">
-                <div className="mx-auto max-w-5xl px-5 text-center lg:px-8">
-                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
-                        Research Vision
-                    </p>
-                    <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
-                        Evidence should improve lives.
-                    </h2>
-                    <p className="mt-6 text-xl leading-9 text-slate-600">
-                        To contribute to a future where evidence-based stroke care is accessible,
-                        equitable, and effective for every patient regardless of geography, income,
-                        or health system limitations.
-                    </p>
+                <div className="mx-auto max-w-7xl px-5 lg:px-8">
+                    <div className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-4 md:p-12">
+                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
+                            Research Vision
+                        </p>
+
+                        <h2 className="mt-4 max-w-4xl text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+                            Evidence should improve lives.
+                        </h2>
+
+                        <p className="mt-6 max-w-4xl text-xl leading-9 text-slate-600">
+                            To contribute to a future where evidence-based stroke care is
+                            accessible, equitable, and effective for every patient regardless of
+                            geography, income, or health system limitations.
+                        </p>
+
+                        <div className="mt-10 grid gap-4 md:grid-cols-3">
+                            <div className="rounded-2xl bg-white p-4 shadow-sm">
+                                <p className="text-lg font-bold text-slate-950">Access</p>
+                                <p className="mt-2 text-sm leading-6 text-slate-600">
+                                    Expanding access to timely diagnosis and treatment.
+                                </p>
+                            </div>
+
+                            <div className="rounded-2xl bg-white p-4 shadow-sm">
+                                <p className="text-lg font-bold text-slate-950">Equity</p>
+                                <p className="mt-2 text-sm leading-6 text-slate-600">
+                                    Reducing disparities in stroke outcomes across populations.
+                                </p>
+                            </div>
+
+                            <div className="rounded-2xl bg-white p-4 shadow-sm">
+                                <p className="text-lg font-bold text-slate-950">Impact</p>
+                                <p className="mt-2 text-sm leading-6 text-slate-600">
+                                    Translating research into measurable improvements in care.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 

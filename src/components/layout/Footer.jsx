@@ -119,12 +119,12 @@ const Footer = () => {
                         </h3>
 
                         <ul className="mt-5 space-y-3 text-sm text-slate-300">
-                            <li>Stroke Care</li>
-                            <li>Stroke Prevention</li>
-                            <li>Neurovascular Surgery</li>
-                            <li>Stroke Research</li>
-                            <li>Health Equity</li>
-                            <li>Public Awareness</li>
+                            <li>• Stroke Care</li>
+                            <li>• Stroke Prevention</li>
+                            <li>• Neurovascular Surgery</li>
+                            <li>• Stroke Research</li>
+                            <li>• Health Equity</li>
+                            <li>• Public Awareness</li>
                         </ul>
                     </div>
 

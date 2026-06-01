@@ -350,23 +350,47 @@ const Awareness = () => {
             </section>
 
             <section className="bg-slate-50 py-5 md:py-20">
-                <div className="mx-auto max-w-4xl px-5 lg:px-8">
+                <div className="mx-auto max-w-5xl px-5 lg:px-8">
                     <div className="text-center">
-                        <HelpCircle className="mx-auto h-10 w-10 text-teal-700" />
-                        <h2 className="mt-6 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+                        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
+                            <HelpCircle className="h-7 w-7" />
+                        </div>
+
+                        <p className="mt-6 text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
+                            Common Questions
+                        </p>
+
+                        <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
                             Frequently Asked Questions
                         </h2>
+
+                        <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+                            Clear answers to common questions about stroke awareness, prevention,
+                            emergency response, and recovery.
+                        </p>
                     </div>
 
                     <div className="mt-12 space-y-4">
-                        {faqs.map((faq) => (
-                            <div
+                        {faqs.map((faq, index) => (
+                            <details
                                 key={faq.question}
-                                className="rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm"
+                                className="group rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-teal-200 hover:shadow-md md:p-6"
+                                open={index === 0}
                             >
-                                <h3 className="text-xl font-bold text-slate-950">{faq.question}</h3>
-                                <p className="mt-3 leading-7 text-slate-600">{faq.answer}</p>
-                            </div>
+                                <summary className="flex cursor-pointer list-none items-center justify-between gap-6">
+                                    <h3 className="text-lg font-bold text-slate-950 md:text-xl">
+                                        {faq.question}
+                                    </h3>
+
+                                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal-700/10 text-xl font-semibold text-teal-700 transition group-open:rotate-45">
+                                        +
+                                    </span>
+                                </summary>
+
+                                <p className="mt-5 border-t border-slate-100 pt-5 leading-7 text-slate-600">
+                                    {faq.answer}
+                                </p>
+                            </details>
                         ))}
                     </div>
                 </div>

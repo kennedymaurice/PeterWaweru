@@ -4,6 +4,7 @@ import {
     Award,
     BookOpen,
     Brain,
+    Building2,
     Handshake,
     HeartPulse,
     Microscope,
@@ -160,9 +161,9 @@ const Home = () => {
                             </div>
 
                             <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 backdrop-blur">
-                                <p className="text-2xl font-bold text-white">Africa</p>
+                                <p className="text-2xl font-bold text-white">2900+</p>
                                 <p className="mt-1 text-xs font-medium text-slate-400">
-                                    Stroke Systems
+                                    Research Reads
                                 </p>
                             </div>
                         </div>
@@ -256,39 +257,68 @@ const Home = () => {
             </section>
 
             {/* About */}
-            <section className="py-5 md:py-20">
-                <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-                    <div>
-                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
-                            About Dr. Waweru
-                        </p>
-                        <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
-                            Clinical expertise shaped by research and public health impact.
-                        </h2>
-                    </div>
+            <section className="bg-white py-5 md:py-20">
+                <div className="mx-auto max-w-7xl px-5 lg:px-8">
+                    <div className="grid gap-12 rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4 md:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-12">
+                        <div>
+                            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
+                                About Dr. Waweru
+                            </p>
 
-                    <div className="space-y-6 text-lg leading-8 text-slate-600">
-                        <p>
-                            Stroke remains one of the leading causes of death and disability
-                            worldwide, with an increasing burden across Africa. Dr. Peter Waweru has
-                            dedicated his career to addressing this challenge through specialist
-                            neurosurgical care, research, public education, and health systems
-                            strengthening.
-                        </p>
+                            <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+                                Clinical expertise shaped by research and public health impact.
+                            </h2>
 
-                        <p>
-                            As a vascular and endovascular neurosurgeon and stroke specialist, he
-                            combines clinical expertise with a deep commitment to improving stroke
-                            outcomes through research, collaboration, and innovation.
-                        </p>
+                            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+                                <div className="rounded-2xl bg-white p-4 shadow-sm">
+                                    <p className="text-xl font-bold text-slate-950">Stroke</p>
+                                    <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                                        Specialist Care
+                                    </p>
+                                </div>
 
-                        <Link
-                            to="/about"
-                            className="inline-flex items-center font-semibold text-teal-700 hover:text-teal-800"
-                        >
-                            Learn more about Dr. Waweru
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
+                                <div className="rounded-2xl bg-white p-4 shadow-sm">
+                                    <p className="text-xl font-bold text-slate-950">Research</p>
+                                    <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                                        Evidence Driven
+                                    </p>
+                                </div>
+
+                                <div className="rounded-2xl bg-white p-4 shadow-sm">
+                                    <p className="text-xl font-bold text-slate-950">Africa</p>
+                                    <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                                        Health Equity
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="rounded-[1.5rem] bg-white p-4 shadow-sm md:p-8">
+                            <div className="space-y-6 text-lg leading-8 text-slate-600">
+                                <p>
+                                    Stroke remains one of the leading causes of death and disability
+                                    worldwide, with an increasing burden across Africa. Dr. Peter
+                                    Waweru has dedicated his career to addressing this challenge
+                                    through specialist neurosurgical care, research, public
+                                    education, and health systems strengthening.
+                                </p>
+
+                                <p>
+                                    As a vascular and endovascular neurosurgeon and stroke
+                                    specialist, he combines clinical expertise with a deep
+                                    commitment to improving stroke outcomes through research,
+                                    collaboration, and innovation.
+                                </p>
+                            </div>
+
+                            <Link
+                                to="/about"
+                                className="mt-8 inline-flex items-center rounded-full bg-teal-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-800"
+                            >
+                                Learn more about Dr. Waweru
+                                <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -385,23 +415,45 @@ const Home = () => {
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
                             Current Appointments
                         </p>
+
                         <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
                             Clinical, research, and specialist practice roles.
                         </h2>
+
+                        <p className="mt-6 max-w-lg text-lg leading-8 text-slate-600">
+                            Dr. Waweru contributes to stroke care through specialist clinical
+                            practice, academic research, and collaborative health systems
+                            initiatives across Kenya and Africa.
+                        </p>
                     </div>
 
                     <div className="space-y-5">
                         {appointments.map((item) => (
                             <div
                                 key={item.institution}
-                                className="rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm"
+                                className="group rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-teal-200 hover:shadow-lg"
                             >
-                                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">
-                                    {item.role}
-                                </p>
-                                <h3 className="mt-3 text-2xl font-bold text-slate-950">
-                                    {item.institution}
-                                </h3>
+                                <div className="flex items-start justify-between gap-4">
+                                    <div>
+                                        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">
+                                            {item.role}
+                                        </p>
+
+                                        <h3 className="mt-3 text-2xl font-bold text-slate-950">
+                                            {item.institution}
+                                        </h3>
+
+                                        {item.description && (
+                                            <p className="mt-4 leading-7 text-slate-600">
+                                                {item.description}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700 transition-colors group-hover:bg-teal-700 group-hover:text-white">
+                                        <Building2 className="h-6 w-6" />
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>
