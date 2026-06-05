@@ -278,11 +278,11 @@ const About = () => {
                                 <div
                                     key={item.title}
                                     className="
-          group rounded-3xl border border-slate-200
-          bg-white p-4 md:p-7 shadow-sm
-          transition-all duration-300
-          hover:-translate-y-1 hover:border-teal-200 hover:shadow-xl
-        "
+                                        group rounded-3xl border border-slate-200
+                                        bg-white p-4 md:p-7 shadow-sm
+                                        transition-all duration-300
+                                        hover:-translate-y-1 hover:border-teal-200 hover:shadow-xl
+                                    "
                                 >
                                     <div className="flex items-center gap-4">
                                         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700 transition-colors group-hover:bg-teal-700 group-hover:text-white">
@@ -342,17 +342,17 @@ const About = () => {
                                 <div
                                     key={item.name}
                                     className="
-              group rounded-3xl
-              border border-white/10
-              bg-white/[0.04]
-              p-4 md:p-8
-              backdrop-blur-sm
-              transition-all duration-300
-              hover:-translate-y-1
-              hover:border-teal-400/30
-              hover:bg-white/[0.06]
-              hover:shadow-2xl hover:shadow-black/20
-            "
+                                        group rounded-3xl
+                                        border border-white/10
+                                        bg-white/[0.04]
+                                        p-4 md:p-8
+                                        backdrop-blur-sm
+                                        transition-all duration-300
+                                        hover:-translate-y-1
+                                        hover:border-teal-400/30
+                                        hover:bg-white/[0.06]
+                                        hover:shadow-2xl hover:shadow-black/20
+                                    "
                                 >
                                     <div className="flex items-center gap-4">
                                         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-500/15 text-teal-300 transition-colors group-hover:bg-teal-500 group-hover:text-white">
