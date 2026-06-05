@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
     ArrowRight,
+    ArrowUpRight,
     BarChart3,
     BookOpen,
     ExternalLink,
@@ -24,9 +26,11 @@ const publications = [
     {
         title: "UPESI: Swahili Translation of the FAST Acronym for Stroke Awareness Campaigns in East Africa",
         journal: "African Journal of Emergency Medicine",
-        url: "https://www.researchgate.net/publication/382082732_UPESI_Swahili_translation_of_the_FAST_acronym_for_stroke_awareness_campaigns_in_East_Africa?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImNpdGF0aW9uRG93bmxvYWQiLCJwYWdlIjoicHJvZmlsZSJ9fQ",
-        abstractUrl: "https://www.sciencedirect.com/science/article/pii/S2211419X2400025X",
-        citation: `Waweru, P. (2024). UPESI: Swahili Translation of the FAST Acronym for Stroke Awareness Campaigns in East Africa. African Journal of Emergency Medicine. https://doi.org/10.1016/j.afjem.2024.01.001`,
+        url: "https://www.researchgate.net/publication/382082732_UPESI_Swahili_translation_of_the_FAST_acronym_for_stroke_awareness_campaigns_in_East_Africa",
+        abstractUrl:
+            "https://www.sciencedirect.com/science/article/pii/S2211419X24000181?via%3Dihub",
+        citation:
+            "Waweru PK, Yulu E, Matuja SS, Gatimu SM. UPESI: Swahili translation of the FAST acronym for stroke awareness campaigns in East Africa. African Journal of Emergency Medicine. 2024;14(3):141-144. doi:10.1016/j.afjem.2024.05.003",
         year: "2024",
         summary:
             "A study focused on developing UPESI, a culturally adapted Swahili translation of the FAST stroke-awareness tool to improve early stroke recognition and emergency response in East Africa.",
@@ -35,9 +39,11 @@ const publications = [
     {
         title: "Revisiting Africa’s Stroke Obstacles and Services (SOS)",
         journal: "Neurological Sciences",
-        url: "https://www.sciencedirect.com/science/article/pii/S2211419X2400025X",
-        abstractUrl: "https://www.sciencedirect.com/science/article/pii/S2211419X2400025X",
-        citation: `Waweru, P. (2024). UPESI: Swahili Translation of the FAST Acronym for Stroke Awareness Campaigns in East Africa. African Journal of Emergency Medicine. https://doi.org/10.1016/j.afjem.2024.01.001`,
+        url: "https://link.springer.com/article/10.1007/s10072-024-07982-y",
+        abstractUrl:
+            "https://www.researchgate.net/publication/388068418_Revisiting_Africa's_Stroke_Obstacles_and_Services_SOS",
+        citation:
+            "Roushdy T, et al. Revisiting Africa’s Stroke Obstacles and Services (SOS). Neurological Sciences. 2025;46(5):2171-2181. doi:10.1007/s10072-024-07982-y",
         year: "2025",
         summary:
             "A continental reassessment of stroke services, barriers, and opportunities for strengthening stroke systems of care across African countries.",
@@ -46,9 +52,11 @@ const publications = [
     {
         title: "Stroke Epidemiology, Care, and Outcomes in Kenya: A Scoping Review",
         journal: "Frontiers in Neurology",
-        url: "https://www.sciencedirect.com/science/article/pii/S2211419X2400025X",
-        abstractUrl: "https://www.sciencedirect.com/science/article/pii/S2211419X2400025X",
-        citation: `Waweru, P. (2024). UPESI: Swahili Translation of the FAST Acronym for Stroke Awareness Campaigns in East Africa. African Journal of Emergency Medicine. https://doi.org/10.1016/j.afjem.2024.01.001`,
+        url: "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2021.785607/full",
+        abstractUrl:
+            "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2021.785607/full",
+        citation:
+            "Waweru P, Gatimu SM. Stroke Epidemiology, Care, and Outcomes in Kenya: A Scoping Review. Frontiers in Neurology. 2021;12:785607. doi:10.3389/fneur.2021.785607",
         year: "2021",
         summary:
             "A review of evidence on stroke burden, care pathways, and outcomes in Kenya, highlighting gaps and opportunities for improving stroke prevention and treatment.",
@@ -57,9 +65,10 @@ const publications = [
     {
         title: "Stroke Services in Africa: What Is There and What Is Needed",
         journal: "International Journal of Stroke",
-        url: "https://www.sciencedirect.com/science/article/pii/S2211419X2400025X",
-        abstractUrl: "https://www.sciencedirect.com/science/article/pii/S2211419X2400025X",
-        citation: `Waweru, P. (2024). UPESI: Swahili Translation of the FAST Acronym for Stroke Awareness Campaigns in East Africa. African Journal of Emergency Medicine. https://doi.org/10.1016/j.afjem.2024.01.001`,
+        url: "https://www.researchgate.net/publication/357574041_Stroke_services_in_Africa_What_is_there_and_what_is_needed",
+        abstractUrl: "https://journals.sagepub.com/doi/10.1177/17474930211066416",
+        citation:
+            "Roushdy T, et al. Stroke services in Africa: What is there and what is needed. International Journal of Stroke. 2022;17(9):972-982. doi:10.1177/17474930211066416",
         year: "2022",
         summary:
             "A multicountry assessment examining availability, accessibility, and needs of stroke services across African healthcare systems.",
@@ -68,9 +77,11 @@ const publications = [
     {
         title: "Mortality and Functional Outcomes After Spontaneous Subarachnoid Haemorrhage",
         journal: "PLOS ONE",
-        url: "https://www.sciencedirect.com/science/article/pii/S2211419X2400025X",
-        abstractUrl: "https://www.sciencedirect.com/science/article/pii/S2211419X2400025X",
-        citation: `Waweru, P. (2024). UPESI: Swahili Translation of the FAST Acronym for Stroke Awareness Campaigns in East Africa. African Journal of Emergency Medicine. https://doi.org/10.1016/j.afjem.2024.01.001`,
+        url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0217832",
+        abstractUrl:
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0217832#abstract0",
+        citation:
+            "Waweru P, Gatimu SM. Mortality and functional outcomes after a spontaneous subarachnoid haemorrhage: A retrospective multicentre cross-sectional study in Kenya. PLOS ONE. 2019;14(6):e0217832. doi:10.1371/journal.pone.0217832",
         year: "2019",
         summary:
             "A multicentre Kenyan study evaluating mortality and functional outcomes among patients with spontaneous subarachnoid haemorrhage.",
@@ -86,20 +97,43 @@ const categories = [
     "Health Equity",
 ];
 
-const profiles = ["ResearchGate", "Google Scholar", "ORCID", "PubMed"];
+const profiles = [
+    {
+        name: "ResearchGate",
+        url: "https://www.researchgate.net/profile/Peter-Waweru",
+    },
+    {
+        name: "World Stroke Organization",
+        url: "https://www.world-stroke.org/world-stroke-future-leaders/community-members/peter-waweru",
+    },
+    {
+        name: "LinkedIn",
+        url: "https://ke.linkedin.com/in/peter-waweru-12164537",
+    },
+    {
+        name: "X (Twitter)",
+        url: "https://x.com/PWaweruNS",
+    },
+];
 
-const copyCitation = async (citation) => {
+const copyCitation = async (citation, title) => {
     if (!citation) return;
 
     try {
         await navigator.clipboard.writeText(citation);
-        alert("Citation copied to clipboard.");
+        setCopiedCitation(title);
+
+        setTimeout(() => {
+            setCopiedCitation(null);
+        }, 2000);
     } catch (error) {
-        alert("Unable to copy citation. Please try again.");
+        console.error("Failed to copy citation:", error);
     }
 };
 
 const Publications = () => {
+    const [copiedCitation, setCopiedCitation] = useState(null);
+
     return (
         <main className="bg-white">
             <SEO
@@ -182,7 +216,7 @@ const Publications = () => {
                         </div>
                     </div>
 
-                    <div className="mt-12 space-y-6">
+                    <div className="mt-6 md:mt-12 space-y-6">
                         {publications.map((publication) => (
                             <article
                                 key={publication.title}
@@ -254,15 +288,24 @@ const Publications = () => {
 
                                         <button
                                             type="button"
-                                            onClick={() => copyCitation(publication.citation)}
+                                            onClick={() =>
+                                                copyCitation(
+                                                    publication.citation,
+                                                    publication.title
+                                                )
+                                            }
                                             disabled={!publication.citation}
                                             className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition ${
                                                 publication.citation
-                                                    ? "text-slate-600 hover:bg-slate-100 hover:text-teal-700"
+                                                    ? copiedCitation === publication.title
+                                                        ? "bg-teal-50 text-teal-700"
+                                                        : "text-slate-600 hover:bg-slate-100 hover:text-teal-700"
                                                     : "cursor-not-allowed text-slate-400"
                                             }`}
                                         >
-                                            Citation
+                                            {copiedCitation === publication.title
+                                                ? "Copied"
+                                                : "Citation"}
                                             <Quote className="ml-2 h-4 w-4" />
                                         </button>
                                     </div>
@@ -312,24 +355,33 @@ const Publications = () => {
                             Research Profiles
                         </p>
                         <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
-                            Academic and research profile links.
+                            Academic, research and professional profile links.
                         </h2>
                     </div>
 
                     <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                         {profiles.map((profile) => (
                             <div
-                                key={profile}
-                                className="rounded-3xl border border-slate-200 bg-slate-50 p-4 md:p-8 shadow-sm"
+                                key={profile.name}
+                                className="group rounded-3xl border border-slate-200 bg-slate-50 p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-teal-200 hover:shadow-lg md:p-8"
                             >
                                 <div className="flex items-center gap-4">
                                     <Globe2 className="h-8 w-8 shrink-0 text-teal-700" />
 
-                                    <h3 className="text-2xl font-bold text-slate-950">{profile}</h3>
+                                    <h3 className="text-2xl font-bold text-slate-950">
+                                        {profile.name}
+                                    </h3>
                                 </div>
-                                <p className="mt-3 leading-7 text-slate-600">
-                                    External profile link to be added after verification.
-                                </p>
+
+                                <a
+                                    href={profile.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-4 inline-flex items-center font-semibold text-teal-700 transition hover:text-teal-800"
+                                >
+                                    Visit Profile
+                                    <ArrowUpRight className="ml-2 h-4 w-4 transition group-hover:translate-x-1 group-hover:-translate-y-1" />
+                                </a>
                             </div>
                         ))}
                     </div>

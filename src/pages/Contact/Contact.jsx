@@ -24,6 +24,15 @@ const inquiryTypes = [
     "General Inquiry",
 ];
 
+const inquiryTitles = {
+    consultation: "Clinical Consultation Request",
+    research: "Research Collaboration Request",
+    speaking: "Speaking Engagement Request",
+    media: "Media Inquiry",
+    partnership: "Professional Partnership Inquiry",
+    other: "General Inquiry",
+};
+
 const contactCategories = [
     {
         title: "Clinical Consultations",
@@ -61,15 +70,17 @@ const contactCategories = [
     },
 ];
 
+const initialFormState = {
+    fullName: "",
+    phone: "",
+    email: "",
+    organization: "",
+    inquiryType: "Clinical Consultation",
+    message: "",
+};
+
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        fullName: "",
-        phone: "",
-        email: "",
-        organization: "",
-        inquiryType: "Clinical Consultation",
-        message: "",
-    });
+    const [formData, setFormData] = useState(initialFormState);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -80,22 +91,55 @@ const Contact = () => {
         }));
     };
 
+    const inquiryTitle = inquiryTitles[formData.inquiryType] || "General Inquiry";
+
     const buildWhatsAppMessage = () => {
-        return `Hello Dr. Waweru,
+        return `
+━━━━━━━━━━━━━━━━━━━━━━
+${inquiryTitle.toUpperCase()}
+━━━━━━━━━━━━━━━━━━━━━━
+        
+Hello Dr. Peter Kuria Waweru,
 
-I am contacting you through your professional website.
+Thank you for making your professional services accessible through this platform.
 
-Inquiry Type: ${formData.inquiryType}
+I would like to submit the following inquiry:
 
-Full Name: ${formData.fullName}
-Phone: ${formData.phone}
-Email: ${formData.email}
-Organization: ${formData.organization || "Not provided"}
+━━━━━━━━━━━━━━━━━━━━━━
+CONTACT INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━
 
-Message:
-${formData.message}
+Name:
+- ${formData.fullName}
 
-Thank you.`;
+Phone:
+- ${formData.phone}
+
+Email:
+- ${formData.email}
+
+Organization:
+- ${formData.organization || "Independent / Not Provided"}
+
+━━━━━━━━━━━━━━━━━━━━━━
+REQUEST CATEGORY
+━━━━━━━━━━━━━━━━━━━━━━
+
+- ${formData.inquiryType}
+
+━━━━━━━━━━━━━━━━━━━━━━
+DETAILS OF INQUIRY
+━━━━━━━━━━━━━━━━━━━━━━
+
+- ${formData.message}
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+I look forward to your response and appreciate your time.
+
+Kind regards,
+
+${formData.fullName}`;
     };
 
     const handleSubmit = (event) => {
@@ -105,6 +149,10 @@ Thank you.`;
         const whatsappUrl = `https://wa.me/${DR_WAWERU_WHATSAPP}?text=${message}`;
 
         window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+        setTimeout(() => {
+            setFormData(initialFormState);
+        }, 500);
     };
 
     return (
@@ -156,7 +204,7 @@ Thank you.`;
             </section>
 
             <section className="py-5 md:py-20">
-                <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-12 px-5 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
                             Inquiry Categories
@@ -169,7 +217,7 @@ Thank you.`;
                             details and inquiry type.
                         </p>
 
-                        <div className="mt-10 grid gap-4 sm:grid-cols-2">
+                        <div className="mt-5 md:mt-10 grid gap-4 sm:grid-cols-2">
                             {contactCategories.map((category) => {
                                 const Icon = category.icon;
 
@@ -203,9 +251,26 @@ Thank you.`;
                                 );
                             })}
                         </div>
+                        <div className="mt-6 rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm">
+                            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">
+                                Professional Way to Connect
+                            </p>
+
+                            <div className="mt-5 space-y-4">
+                                <a
+                                    href="mailto:pwaweru09@gmail.com"
+                                    className="flex items-center gap-4 rounded-2xl bg-slate-50 p-4 transition hover:bg-teal-50"
+                                >
+                                    <Mail className="h-5 w-5 text-teal-700" />
+                                    <span className="font-medium text-slate-800">
+                                        pwaweru09@gmail.com
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-4 md:p-8">
+                    <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4 md:p-8">
                         <div className="rounded-[1.5rem] bg-white p-4 md:p-8">
                             <div className="mb-8">
                                 <div className="flex items-center gap-4">

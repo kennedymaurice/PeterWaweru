@@ -32,7 +32,7 @@ const Header = () => {
 
     return (
         <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 shadow-sm shadow-slate-900/[0.03] backdrop-blur-xl">
-            <div className="mx-auto flex h-24 max-w-7xl items-center justify-between gap-6 px-5 lg:px-8">
+            <div className="mx-auto flex h-24 max-w-7xl items-center justify-between gap-6 px-5 lg:px-8 overflow-hidden">
                 <Link
                     to="/"
                     className="flex shrink-0 items-center"

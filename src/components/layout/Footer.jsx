@@ -1,43 +1,39 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
-import {
-    FaLinkedinIn,
-    FaResearchgate,
-    FaGoogleScholar,
-    FaOrcid,
-    FaXTwitter,
-} from "react-icons/fa6";
+import { ArrowUpRight, ArrowUp } from "lucide-react";
+import { FaLinkedinIn, FaResearchgate, FaOrcid, FaXTwitter, FaInstagram } from "react-icons/fa6";
 
 const socialLinks = [
     {
         name: "LinkedIn",
-        url: "https://linkedin.com",
+        url: "https://ke.linkedin.com/in/peter-waweru-1216453",
         icon: FaLinkedinIn,
     },
     {
         name: "ResearchGate",
-        url: "https://researchgate.net",
+        url: "https://www.researchgate.net/profile/Peter-Waweru",
         icon: FaResearchgate,
     },
     {
-        name: "Google Scholar",
-        url: "https://scholar.google.com",
-        icon: FaGoogleScholar,
-    },
-    {
-        name: "ORCID",
-        url: "https://orcid.org",
-        icon: FaOrcid,
+        name: "Instagram",
+        url: "https://www.instagram.com/peterwaweruns/",
+        icon: FaInstagram,
     },
     {
         name: "X",
-        url: "https://x.com",
+        url: "https://x.com/PWaweruNS",
         icon: FaXTwitter,
     },
 ];
 
 const Footer = () => {
     const year = new Date().getFullYear();
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
 
     return (
         <footer className="bg-slate-950 text-white">
@@ -109,6 +105,18 @@ const Footer = () => {
                                     Media
                                 </Link>
                             </li>
+
+                            <li>
+                                <Link to="/stroke-awareness" className="hover:text-white">
+                                    Awareness
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link to="/gallery" className="hover:text-white">
+                                    Gallery
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
@@ -119,11 +127,12 @@ const Footer = () => {
                         </h3>
 
                         <ul className="mt-5 space-y-3 text-sm text-slate-300">
-                            <li>• Stroke Care</li>
-                            <li>• Stroke Prevention</li>
+                            <li>• Stroke Medicine</li>
+                            <li>• Cerebrovascular Disease</li>
                             <li>• Neurovascular Surgery</li>
-                            <li>• Stroke Research</li>
+                            <li>• Stroke Epidemiology</li>
                             <li>• Health Equity</li>
+                            <li>• Health Systems Strengthening</li>
                             <li>• Public Awareness</li>
                         </ul>
                     </div>

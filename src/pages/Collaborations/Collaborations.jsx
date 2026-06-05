@@ -304,7 +304,7 @@ const Collaborations = () => {
                         </p>
                     </div>
 
-                    <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-4 md:p-8">
+                    <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4 md:p-8">
                         <h3 className="text-2xl font-bold text-slate-950">
                             Partnership opportunities may support:
                         </h3>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import {
     ArrowRight,
+    ArrowUpRight,
     BookOpen,
     Brain,
     BriefcaseMedical,
@@ -129,14 +130,22 @@ const Media = () => {
 
                             <Link
                                 to="/stroke-awareness"
-                                className="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white hover:text-slate-950"
+                                className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-slate-950 shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:bg-slate-100"
                             >
                                 Stroke Awareness
+                            </Link>
+
+                            <Link
+                                to="/gallery"
+                                className="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white hover:text-slate-950"
+                            >
+                                Explore Gallery
+                                <ArrowUpRight className="ml-2 h-4 w-4" />
                             </Link>
                         </div>
                     </div>
 
-                    <div className="rounded-[2rem] border border-white/10 bg-white/[0.05] p-4 shadow-2xl shadow-black/20">
+                    <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-4 shadow-2xl shadow-black/20">
                         <div className="relative overflow-hidden rounded-[1.5rem]">
                             <img
                                 src="/peter-speaking.webp"
@@ -281,7 +290,7 @@ const Media = () => {
                         </p>
                     </div>
 
-                    <div className="rounded-[2rem] border border-white/10 bg-white/[0.05] p-4 md:p-8">
+                    <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-4 md:p-8">
                         <h3 className="text-2xl font-bold">Advocacy Priorities</h3>
 
                         <div className="mt-6 grid gap-3">

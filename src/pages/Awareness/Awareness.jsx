@@ -142,10 +142,10 @@ const Awareness = () => {
                         </div>
                     </div>
 
-                    <div className="rounded-[2rem] border border-white/10 bg-white/[0.05] p-4 shadow-2xl shadow-black/20">
+                    <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-4 shadow-2xl shadow-black/20">
                         <div className="relative overflow-hidden rounded-[1.5rem]">
                             <img
-                                src="/awareness.webp"
+                                src="/peter-awareness.jpeg"
                                 alt="Dr. Peter Waweru speaking at a conference"
                                 className="h-[420px] w-full object-cover"
                             />
@@ -158,7 +158,7 @@ const Awareness = () => {
 
             <section id="warning-signs" className="py-4 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="rounded-[2rem] border border-teal-100 bg-teal-50 p-4 md:p-8 md:p-10">
+                    <div className="rounded-[1.5rem] border border-teal-100 bg-teal-50 p-4 md:p-8 md:p-10">
                         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
                             <div>
                                 <div className="flex items-center gap-4">
@@ -312,37 +312,6 @@ const Awareness = () => {
                                 className="rounded-2xl border border-white/10 bg-white/[0.05] p-5 text-sm font-semibold text-slate-200"
                             >
                                 {risk}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            <section className="py-5 md:py-20">
-                <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="max-w-3xl">
-                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
-                            Resources
-                        </p>
-                        <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
-                            Downloadable guides and patient education tools.
-                        </h2>
-                    </div>
-
-                    <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                        {resources.map((resource) => (
-                            <div
-                                key={resource}
-                                className="rounded-3xl border border-slate-200 bg-slate-50 p-4 md:p-8 shadow-sm"
-                            >
-                                <div className="flex items-center gap-4">
-                                    <Download className="h-8 w-8 shrink-0 text-teal-700" />
-
-                                    <h3 className="text-xl font-bold text-slate-950">{resource}</h3>
-                                </div>
-                                <p className="mt-3 text-sm leading-6 text-slate-600">
-                                    Resource file to be added after content approval.
-                                </p>
                             </div>
                         ))}
                     </div>

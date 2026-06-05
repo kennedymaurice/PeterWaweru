@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import BackToTop from "../components/layout/BackToTop";
 
 const MainLayout = () => {
     const location = useLocation();
@@ -26,6 +27,7 @@ const MainLayout = () => {
             </AnimatePresence>
 
             <Footer />
+            <BackToTop />
         </div>
     );
 };

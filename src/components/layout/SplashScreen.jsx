@@ -16,7 +16,7 @@ const SplashScreen = () => {
             </div>
 
             <motion.div
-                className="relative rounded-[2rem] border border-white/10 bg-white/10 p-5 shadow-2xl shadow-black/30 backdrop-blur"
+                className="relative rounded-[1.5rem] border border-white/10 bg-white/10 p-5 shadow-2xl shadow-black/30 backdrop-blur"
                 initial={{ scale: 0.92, opacity: 0, y: 10 }}
                 animate={{ scale: 1, opacity: 1, y: 0 }}
                 transition={{

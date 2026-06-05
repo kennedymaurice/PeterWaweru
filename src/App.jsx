@@ -13,6 +13,7 @@ import Awareness from "./pages/Awareness/Awareness";
 import Media from "./pages/Media/Media";
 import Collaborations from "./pages/Collaborations/Collaborations";
 import Contact from "./pages/Contact/Contact";
+import Gallery from "./pages/Gallery/Gallery";
 import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
                     <Route path="/media" element={<Media />} />
                     <Route path="/collaborations" element={<Collaborations />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/gallery" element={<Gallery />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
             </Routes>

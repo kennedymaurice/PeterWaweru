@@ -9,64 +9,107 @@ import {
     Microscope,
     ShieldCheck,
     Stethoscope,
+    Activity,
+    BarChart3,
+    Network,
+    Scale,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import SEO from "../../components/seo/SEO";
 import { personPhysicianSchema } from "../../data/schema";
 
 const credentials = [
     {
         title: "MBChB",
-        description: "Medical training foundation.",
+        description:
+            "Bachelor of Medicine and Bachelor of Surgery, providing the foundation for clinical practice and patient care.",
         icon: GraduationCap,
     },
     {
-        title: "MSc Stroke Medicine",
-        description: "Specialized academic training in stroke medicine.",
+        title: "MSc (Stroke Medicine)",
+        description:
+            "Advanced postgraduate training focused on stroke prevention, diagnosis, treatment, rehabilitation, and systems of care.",
         icon: Brain,
     },
     {
         title: "FCS (ECSA)",
-        description: "Specialist surgical fellowship credential.",
+        description:
+            "Fellow of the College of Surgeons of East, Central and Southern Africa, recognizing specialist neurosurgical training and competence.",
         icon: Award,
     },
     {
-        title: "Neuro-Interventional Training",
-        description: "Advanced training in neurovascular and interventional care.",
+        title: "EDNI",
+        description:
+            "European Diploma in Neurointervention, reflecting advanced expertise in endovascular and neurovascular intervention.",
         icon: ShieldCheck,
     },
 ];
 
 const appointments = [
     {
-        institution: "Pan-African Center for Health Equity (PACHE)",
-        role: "Stroke Researcher",
-        description:
-            "Supporting research and initiatives focused on improving stroke care, health outcomes, and equitable healthcare access across Africa.",
-    },
-    {
-        institution: "Kenyatta University Teaching, Referral & Research Hospital",
+        institution: "Kenyatta University Teaching, Referral & Research Hospital (KUTRRH)",
         role: "Vascular & Endovascular Neurosurgeon",
         description:
-            "Providing specialist neurosurgical care and contributing to the advancement of neurovascular services and clinical excellence.",
+            "Providing specialist neurosurgical and neurovascular care while contributing to the advancement of cerebrovascular services, stroke management, and clinical excellence.",
     },
     {
         institution: "Nairobi Stroke Clinic",
-        role: "Stroke Specialist & Vascular Neurosurgeon",
+        role: "Stroke Specialist",
         description:
-            "Supporting patients through comprehensive stroke evaluation, management, prevention, and follow-up care.",
+            "Supporting patients through comprehensive stroke assessment, prevention, treatment, rehabilitation planning, and long-term follow-up care.",
+    },
+    {
+        institution: "Pan-African Center for Health Equity (PACHE)",
+        role: "Founder & Stroke Researcher",
+        description:
+            "Leading research and advocacy initiatives focused on stroke care, health systems strengthening, and equitable access to healthcare across Africa.",
+    },
+    {
+        institution: "Kenya Stroke Society",
+        role: "Founder & Researcher",
+        category: "Leadership & Advocacy",
+        description:
+            "Supporting the growth of a national professional platform focused on strengthening stroke research, public awareness, professional collaboration, and improved stroke outcomes in Kenya.",
+    },
+    {
+        institution: "Kenya Institute of Primate Research (KIPRE)",
+        role: "Associate Researcher",
+        description:
+            "Contributing to collaborative scientific research and advancing knowledge relevant to neurological health and disease.",
     },
 ];
 
 const interests = [
-    "Stroke Medicine",
-    "Neurovascular Surgery",
-    "Cerebrovascular Disease",
-    "Stroke Epidemiology",
-    "Health Systems Strengthening",
-    "Health Equity",
-    "Public Health Advocacy",
-    "Medical Education",
-    "Research Collaboration",
+    {
+        title: "Stroke Medicine",
+        description: "Prevention, diagnosis, treatment, and recovery.",
+        icon: HeartPulse,
+    },
+    {
+        title: "Neurovascular Surgery",
+        description: "Advanced management of cerebrovascular disorders.",
+        icon: Brain,
+    },
+    {
+        title: "Cerebrovascular Disease",
+        description: "Research and clinical care of vascular brain disorders.",
+        icon: Activity,
+    },
+    {
+        title: "Stroke Epidemiology",
+        description: "Understanding disease patterns, risk factors, and outcomes.",
+        icon: BarChart3,
+    },
+    {
+        title: "Health Systems Strengthening",
+        description: "Building effective stroke systems of care.",
+        icon: Network,
+    },
+    {
+        title: "Health Equity",
+        description: "Reducing disparities in access, treatment, and outcomes.",
+        icon: Scale,
+    },
 ];
 
 const About = () => {
@@ -91,10 +134,10 @@ const About = () => {
                         <div className="absolute -left-6 top-10 h-40 w-40 rounded-full bg-teal-500/20 blur-2xl" />
                         <div className="absolute -right-6 bottom-10 h-52 w-52 rounded-full bg-yellow-500/10 blur-2xl" />
 
-                        <div className="relative rounded-[2rem] border border-white/10 bg-white/10 p-3 shadow-2xl shadow-black/30 backdrop-blur">
+                        <div className="relative rounded-[1.5rem] border border-white/10 bg-white/10 p-3 shadow-2xl shadow-black/30 backdrop-blur">
                             <div className="relative overflow-hidden rounded-[1.5rem] bg-slate-900">
                                 <img
-                                    src="/peter-waweru.webp"
+                                    src="/peter.jpeg"
                                     alt="Dr. Peter Kuria Waweru"
                                     className="h-[540px] w-full object-cover object-center"
                                 />
@@ -102,7 +145,7 @@ const About = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent" />
 
                                 <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-slate-950/55 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-teal-200 backdrop-blur">
-                                    MBChB • MSc • FCS (ECSA)
+                                    MBChB • MSc • FCS (ECSA) • EDNI
                                 </div>
 
                                 <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -179,26 +222,36 @@ const About = () => {
             </section>
             <section className="bg-slate-50 py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="max-w-3xl">
+                    <div className="max-w-4xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
                             Credentials
                         </p>
+
                         <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
-                            Specialist training and academic foundation.
+                            Internationally trained in stroke medicine, neurosurgery, and
+                            neurointervention.
                         </h2>
+
+                        <p className="mt-6 text-lg font-semibold leading-8 text-slate-900">
+                            MBChB • MSc (Stroke Medicine) • FCS (ECSA) • EDNI
+                        </p>
                     </div>
 
-                    <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                    <div className="mt-5 md:mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                         {credentials.map((item) => {
                             const Icon = item.icon;
 
                             return (
                                 <div
                                     key={item.title}
-                                    className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
+                                    className="
+                                        group rounded-3xl border border-slate-200
+                                        bg-white p-4 md:p-7 shadow-smtransition-all duration-300
+                                        hover:-translate-y-1 hover:border-teal-200 hover:shadow-xl
+                                    "
                                 >
                                     <div className="flex items-center gap-4">
-                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700 transition-colors group-hover:bg-teal-700 group-hover:text-white">
                                             <Icon className="h-6 w-6" />
                                         </div>
 
@@ -218,14 +271,34 @@ const About = () => {
 
             <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+                    <div className="grid gap-6 md:gap-12 lg:grid-cols-[0.8fr_1.2fr]">
                         <div>
                             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
-                                Appointments
+                                Appointments & Leadership
                             </p>
+
                             <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
                                 Current professional roles.
                             </h2>
+
+                            <p className="mt-6 text-lg font-semibold leading-8 text-slate-900">
+                                Clinical Practice • Research • Advocacy • Health Equity
+                            </p>
+
+                            <p className="mt-6 text-lg leading-8 text-slate-600">
+                                Dr. Waweru's work spans specialist clinical practice, stroke
+                                research, public health advocacy, and health systems strengthening
+                                across Kenya and Africa.
+                            </p>
+
+                            <div className="mt-5 md:mt-8 space-y-4">
+                                <div className="rounded-2xl bg-slate-50 p-4">
+                                    <p className="text-2xl font-bold text-slate-950">5+</p>
+                                    <p className="text-sm text-slate-600">
+                                        Professional appointments and affiliations
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="space-y-6">
@@ -259,7 +332,7 @@ const About = () => {
 
             <section className="bg-slate-950 py-5 md:py-20 text-white">
                 <div className="mx-auto grid max-w-7xl gap-6 px-5 md:grid-cols-2 lg:px-8">
-                    <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8">
+                    <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8">
                         <div className="flex items-center gap-4">
                             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-500/10">
                                 <HeartPulse className="h-6 w-6 text-teal-300" />
@@ -274,7 +347,7 @@ const About = () => {
                         </p>
                     </div>
 
-                    <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8">
+                    <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8">
                         <div className="flex items-center gap-4">
                             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-500/10">
                                 <Microscope className="h-6 w-6 text-teal-300" />
@@ -293,24 +366,58 @@ const About = () => {
 
             <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="max-w-3xl">
+                    <div className="max-w-4xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
                             Areas of Interest
                         </p>
+
                         <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
                             Clinical, academic, and public health focus.
                         </h2>
+
+                        <p className="mt-6 text-lg leading-8 text-slate-600">
+                            Dr. Waweru's work spans specialist clinical care, stroke research,
+                            health systems development, and public health initiatives aimed at
+                            improving neurological outcomes across Africa.
+                        </p>
                     </div>
 
-                    <div className="mt-10 flex flex-wrap gap-3">
-                        {interests.map((item) => (
-                            <span
-                                key={item}
-                                className="rounded-full border border-slate-200 bg-slate-50 px-5 py-3 text-sm font-semibold text-slate-700"
-                            >
-                                {item}
-                            </span>
-                        ))}
+                    <div className="mt-5 md:mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        {interests.map((item, index) => {
+                            const Icon = item.icon;
+
+                            return (
+                                <motion.div
+                                    key={item.title}
+                                    initial={{ opacity: 0, y: 24 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.25 }}
+                                    transition={{
+                                        duration: 0.45,
+                                        delay: index * 0.06,
+                                        ease: "easeOut",
+                                    }}
+                                    whileHover={{ y: -6 }}
+                                    className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-teal-200 hover:shadow-xl hover:shadow-slate-900/10"
+                                >
+                                    <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-teal-700/5 transition group-hover:bg-teal-700/10" />
+
+                                    <div className="relative flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700 transition-colors group-hover:bg-teal-700 group-hover:text-white">
+                                            <Icon className="h-6 w-6" />
+                                        </div>
+
+                                        <h3 className="text-xl font-bold text-slate-950">
+                                            {item.title}
+                                        </h3>
+                                    </div>
+
+                                    <p className="relative mt-5 leading-7 text-slate-600">
+                                        {item.description}
+                                    </p>
+                                </motion.div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>

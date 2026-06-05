@@ -173,7 +173,7 @@ const Home = () => {
                         <div className="absolute -left-8 top-10 h-48 w-48 rounded-full bg-teal-500/20 blur-2xl" />
                         <div className="absolute -right-8 bottom-10 h-56 w-56 rounded-full bg-yellow-500/10 blur-2xl" />
 
-                        <div className="relative rounded-[2rem] border border-white/10 bg-white/10 p-3 shadow-2xl shadow-black/30 backdrop-blur">
+                        <div className="relative rounded-[1.5rem] border border-white/10 bg-white/10 p-3 shadow-2xl shadow-black/30 backdrop-blur">
                             <div className="relative overflow-hidden rounded-[1.5rem] bg-slate-900">
                                 <img
                                     src="/peter-waweru.webp"
@@ -184,7 +184,7 @@ const Home = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
 
                                 <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-slate-950/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-teal-200 backdrop-blur">
-                                    MBChB • MSc • FCS (ECSA)
+                                    MBChB • MSc • FCS (ECSA) • EDNI
                                 </div>
 
                                 <div className="absolute bottom-0 left-0 right-0 p-7">

@@ -149,7 +149,7 @@ const Research = () => {
 
             <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-4 md:p-12">
+                    <div className="rounded-[1.5rem] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-4 md:p-12">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
                             Research Vision
                         </p>
@@ -247,7 +247,7 @@ const Research = () => {
                             return (
                                 <div
                                     key={project.title}
-                                    className={`grid overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm lg:grid-cols-2 ${
+                                    className={`grid overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-sm lg:grid-cols-2 ${
                                         index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
                                     }`}
                                 >
@@ -329,7 +329,7 @@ const Research = () => {
                         </p>
                     </div>
 
-                    <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-4 md:p-8">
+                    <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4 md:p-8">
                         <div className="mb-6 flex items-center gap-3">
                             <Handshake className="h-7 w-7 text-teal-700" />
                             <h3 className="text-2xl font-bold text-slate-950">

@@ -181,7 +181,7 @@ const Clinical = () => {
                         </p>
                     </div>
 
-                    <div className="rounded-[2rem] border border-slate-200 bg-white p-4 md:p-8 shadow-sm">
+                    <div className="rounded-[1.5rem] border border-slate-200 bg-white p-4 md:p-8 shadow-sm">
                         <div className="mb-6 flex items-center gap-3">
                             <Users className="h-7 w-7 text-teal-700" />
                             <h3 className="text-2xl font-bold text-slate-950">
