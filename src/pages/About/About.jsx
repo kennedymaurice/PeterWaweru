@@ -13,6 +13,8 @@ import {
     BarChart3,
     Network,
     Scale,
+    Globe2,
+    Shield,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "../../components/seo/SEO";
@@ -21,27 +23,58 @@ import { personPhysicianSchema } from "../../data/schema";
 const credentials = [
     {
         title: "MBChB",
+        institution: "Moi University School of Medicine, Kenya",
         description:
             "Bachelor of Medicine and Bachelor of Surgery, providing the foundation for clinical practice and patient care.",
         icon: GraduationCap,
     },
     {
         title: "MSc (Stroke Medicine)",
+        institution: "Danube University Krems, Austria",
         description:
             "Advanced postgraduate training focused on stroke prevention, diagnosis, treatment, rehabilitation, and systems of care.",
         icon: Brain,
     },
     {
         title: "FCS (ECSA)",
+        institution: "College of Surgeons of East, Central and Southern Africa",
         description:
-            "Fellow of the College of Surgeons of East, Central and Southern Africa, recognizing specialist neurosurgical training and competence.",
+            "Specialist fellowship in neurosurgery recognizing advanced surgical training, competence, and professional excellence.",
         icon: Award,
     },
     {
         title: "EDNI",
+        institution: "European Society of Minimally Invasive Neurological Therapy (ESMINT)",
         description:
-            "European Diploma in Neurointervention, reflecting advanced expertise in endovascular and neurovascular intervention.",
+            "European Diploma in Neurointervention reflecting advanced expertise in endovascular and neurovascular intervention.",
         icon: ShieldCheck,
+    },
+];
+
+const memberships = [
+    {
+        name: "World Stroke Organization (WSO)",
+        description:
+            "Global organization dedicated to reducing the burden of stroke through research, education, advocacy, and improved stroke care worldwide.",
+        icon: Globe2,
+    },
+    {
+        name: "European Stroke Organization (ESO)",
+        description:
+            "Leading European society promoting excellence in stroke research, prevention, treatment, and rehabilitation.",
+        icon: Brain,
+    },
+    {
+        name: "African Stroke Organization (ASO)",
+        description:
+            "Continental organization advancing stroke awareness, research, collaboration, and care throughout Africa.",
+        icon: Shield,
+    },
+    {
+        name: "European Society of Minimally Invasive Neurological Therapy (ESMINT)",
+        description:
+            "Professional society supporting innovation, education, and excellence in neurointerventional and endovascular neurological therapies.",
+        icon: Microscope,
     },
 ];
 
@@ -245,21 +278,93 @@ const About = () => {
                                 <div
                                     key={item.title}
                                     className="
-                                        group rounded-3xl border border-slate-200
-                                        bg-white p-4 md:p-7 shadow-smtransition-all duration-300
-                                        hover:-translate-y-1 hover:border-teal-200 hover:shadow-xl
-                                    "
+          group rounded-3xl border border-slate-200
+          bg-white p-4 md:p-7 shadow-sm
+          transition-all duration-300
+          hover:-translate-y-1 hover:border-teal-200 hover:shadow-xl
+        "
                                 >
                                     <div className="flex items-center gap-4">
                                         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700 transition-colors group-hover:bg-teal-700 group-hover:text-white">
                                             <Icon className="h-6 w-6" />
                                         </div>
 
-                                        <h3 className="text-2xl font-bold text-slate-950">
-                                            {item.title}
+                                        <div>
+                                            <h3 className="text-2xl font-bold text-slate-950">
+                                                {item.title}
+                                            </h3>
+
+                                            <p className="text-sm font-medium text-teal-700">
+                                                {item.institution}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <p className="mt-4 leading-7 text-slate-600">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            <section className="relative overflow-hidden bg-slate-950 py-5 text-white md:py-20">
+                <div className="absolute inset-0 opacity-20">
+                    <div className="absolute -left-24 top-10 h-80 w-80 rounded-full bg-teal-500 blur-3xl" />
+                    <div className="absolute -right-24 bottom-0 h-96 w-96 rounded-full bg-yellow-500/20 blur-3xl" />
+                </div>
+
+                <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+                    <div className="max-w-4xl">
+                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-300">
+                            Professional Memberships
+                        </p>
+
+                        <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
+                            Engaged in leading international stroke and neurovascular communities.
+                        </h2>
+
+                        <p className="mt-6 text-lg leading-8 text-slate-300">
+                            Dr. Waweru actively participates in professional organizations that
+                            advance stroke medicine, neurovascular care, research, education,
+                            innovation, and health policy across Africa, Europe, and the global
+                            community.
+                        </p>
+                    </div>
+
+                    <div className="mt-12 grid gap-6 md:grid-cols-2">
+                        {memberships.map((item) => {
+                            const Icon = item.icon;
+
+                            return (
+                                <div
+                                    key={item.name}
+                                    className="
+              group rounded-3xl
+              border border-white/10
+              bg-white/[0.04]
+              p-4 md:p-8
+              backdrop-blur-sm
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:border-teal-400/30
+              hover:bg-white/[0.06]
+              hover:shadow-2xl hover:shadow-black/20
+            "
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-500/15 text-teal-300 transition-colors group-hover:bg-teal-500 group-hover:text-white">
+                                            <Icon className="h-6 w-6" />
+                                        </div>
+
+                                        <h3 className="text-xl font-bold text-white">
+                                            {item.name}
                                         </h3>
                                     </div>
-                                    <p className="mt-3 leading-7 text-slate-600">
+
+                                    <p className="mt-5 leading-7 text-slate-300">
                                         {item.description}
                                     </p>
                                 </div>
@@ -425,7 +530,7 @@ const About = () => {
             <section className="bg-teal-700 py-5 md:py-20 text-white">
                 <div className="mx-auto max-w-4xl px-5 text-center lg:px-8">
                     <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-100">
-                        WORK
+                        WORKS
                     </p>
 
                     <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
