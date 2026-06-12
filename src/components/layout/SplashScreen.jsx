@@ -28,7 +28,7 @@ const SplashScreen = () => {
                 <img
                     src="/peter-waweru.webp"
                     alt="Dr. Peter Waweru Logo"
-                    className="h-20 w-auto object-contain sm:h-24"
+                    className="h-20 w-auto object-contain sm:h-24 rounded-[1.5rem]"
                 />
             </motion.div>
 

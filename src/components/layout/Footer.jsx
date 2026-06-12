@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight, ArrowUp } from "lucide-react";
-import { FaLinkedinIn, FaResearchgate, FaOrcid, FaXTwitter, FaInstagram } from "react-icons/fa6";
+import { ArrowUpRight } from "lucide-react";
+import { FaLinkedinIn, FaResearchgate, FaXTwitter, FaInstagram } from "react-icons/fa6";
 
 const socialLinks = [
     {
@@ -15,7 +15,7 @@ const socialLinks = [
     },
     {
         name: "Instagram",
-        url: "https://www.instagram.com/peterwaweruns/",
+        url: "https://www.instagram.com/drwaweru/",
         icon: FaInstagram,
     },
     {
@@ -25,21 +25,40 @@ const socialLinks = [
     },
 ];
 
+const focusLinks = [
+    {
+        label: "Stroke Medicine",
+        path: "/clinical-expertise#stroke-medicine",
+    },
+    {
+        label: "Cerebrovascular Disease",
+        path: "/clinical-expertise#cerebrovascular-disease",
+    },
+    {
+        label: "Neurovascular Surgery",
+        path: "/clinical-expertise#neurovascular-surgery",
+    },
+    {
+        label: "Brain Aneurysms",
+        path: "/clinical-expertise#brain-aneurysms",
+    },
+    {
+        label: "Subarachnoid Haemorrhage",
+        path: "/clinical-expertise#subarachnoid-haemorrhage",
+    },
+    {
+        label: "Stroke Prevention",
+        path: "/clinical-expertise#stroke-prevention",
+    },
+];
+
 const Footer = () => {
     const year = new Date().getFullYear();
-
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    };
 
     return (
         <footer className="bg-slate-950 text-white">
             <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
                 <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
-                    {/* Brand */}
                     <div>
                         <img src="/logo.webp" alt="Dr. Peter Waweru" className="h-16 w-auto" />
 
@@ -69,7 +88,6 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Navigation */}
                     <div>
                         <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-400">
                             Navigation
@@ -120,24 +138,22 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Focus Areas */}
                     <div>
                         <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-400">
                             Focus Areas
                         </h3>
 
                         <ul className="mt-5 space-y-3 text-sm text-slate-300">
-                            <li>• Stroke Medicine</li>
-                            <li>• Cerebrovascular Disease</li>
-                            <li>• Neurovascular Surgery</li>
-                            <li>• Stroke Epidemiology</li>
-                            <li>• Health Equity</li>
-                            <li>• Health Systems Strengthening</li>
-                            <li>• Public Awareness</li>
+                            {focusLinks.map((item) => (
+                                <li key={item.path}>
+                                    <Link to={item.path} className="hover:text-white">
+                                        {item.label}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
-                    {/* CTA */}
                     <div>
                         <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-400">
                             Connect
@@ -162,7 +178,6 @@ const Footer = () => {
             <div className="border-t border-white/10">
                 <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between lg:px-8">
                     <p>© {year} Dr. Peter Kuria Waweru. All rights reserved.</p>
-
                     <p>For medical emergencies, seek immediate emergency care.</p>
                 </div>
             </div>

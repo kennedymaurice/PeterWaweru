@@ -15,6 +15,10 @@ import {
     Scale,
     Globe2,
     Shield,
+    Trophy,
+    Plane,
+    FileText,
+    Presentation,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "../../components/seo/SEO";
@@ -78,37 +82,100 @@ const memberships = [
     },
 ];
 
+const leadershipTraining = [
+    {
+        title: "World Stroke Organization Future Leaders’ Programme",
+        institution: "World Stroke Organization, Geneva, Switzerland",
+        period: "2022 – 2024",
+        description:
+            "Advanced leadership programme focused on stroke advocacy, global stroke systems, research leadership, policy engagement, and implementation of stroke care improvement initiatives.",
+        icon: Globe2,
+    },
+    {
+        title: "European Diploma in Neurointervention",
+        institution: "University of Oxford, United Kingdom",
+        period: "2019 – 2023",
+        description:
+            "Advanced neurointerventional training pathway supporting expertise in endovascular and minimally invasive neurological therapy.",
+        icon: ShieldCheck,
+    },
+];
+
+const honours = [
+    {
+        title: "Top Scorer, European Diploma in Neurointervention",
+        subtitle: "Half-Brain Award, 2023",
+        icon: Trophy,
+    },
+    {
+        title: "Best Overall Student",
+        subtitle: "Moi University School of Medicine, 2012",
+        icon: Award,
+    },
+    {
+        title: "European Stroke Organization Department-to-Department Visit",
+        subtitle: "ESO Grant, 2022",
+        icon: Plane,
+    },
+    {
+        title: "Africa-Oxford Travel Grant",
+        subtitle: "AfOx Travel Grant, 2020",
+        icon: Globe2,
+    },
+    {
+        title: "World Stroke Organization Brief Clinical Exchange",
+        subtitle: "WSO Exchange, 2019",
+        icon: Presentation,
+    },
+    {
+        title: "Moi University-Linköping University Rotation",
+        subtitle: "Sweden rotation for best student",
+        icon: GraduationCap,
+    },
+];
+
 const appointments = [
+    {
+        institution: "PCEA Kikuyu Hospital",
+        role: "Vascular & Endovascular Neurosurgeon",
+        category: "Clinical Practice",
+        description:
+            "Providing specialist vascular and endovascular neurosurgical care for patients with stroke, cerebrovascular disease, aneurysms, and complex neurovascular conditions.",
+    },
     {
         institution: "Kenyatta University Teaching, Referral & Research Hospital (KUTRRH)",
         role: "Vascular & Endovascular Neurosurgeon",
+        category: "Clinical Practice",
         description:
-            "Providing specialist neurosurgical and neurovascular care while contributing to the advancement of cerebrovascular services, stroke management, and clinical excellence.",
+            "Providing specialist neurosurgical and neurovascular care while contributing to cerebrovascular services, stroke management, and clinical excellence.",
     },
     {
-        institution: "Nairobi Stroke Clinic",
-        role: "Stroke Specialist",
+        institution: "Brain-Heart Institute, Pan-African Center for Health Equity",
+        role: "Research Director",
+        category: "Research Leadership",
         description:
-            "Supporting patients through comprehensive stroke assessment, prevention, treatment, rehabilitation planning, and long-term follow-up care.",
+            "Leading research initiatives focused on stroke care, brain-heart health, health systems strengthening, and equitable healthcare access across Africa.",
     },
     {
-        institution: "Pan-African Center for Health Equity (PACHE)",
-        role: "Founder & Stroke Researcher",
+        institution: "Kenya Institute of Primate Research (KIPRE)",
+        role: "Associate Researcher",
+        category: "Research",
         description:
-            "Leading research and advocacy initiatives focused on stroke care, health systems strengthening, and equitable access to healthcare across Africa.",
+            "Contributing to collaborative scientific research and advancing knowledge relevant to neurological health and disease.",
     },
     {
         institution: "Kenya Stroke Society",
         role: "Founder & Researcher",
         category: "Leadership & Advocacy",
         description:
-            "Supporting the growth of a national professional platform focused on strengthening stroke research, public awareness, professional collaboration, and improved stroke outcomes in Kenya.",
+            "Supporting the growth of a national professional platform focused on stroke research, public awareness, professional collaboration, and improved stroke outcomes in Kenya.",
     },
     {
-        institution: "Kenya Institute of Primate Research (KIPRE)",
-        role: "Associate Researcher",
+        institution: "Nairobi Stroke Clinic",
+        role: "Stroke Specialist & Vascular Neurosurgeon",
+        category: "Specialist Practice",
         description:
-            "Contributing to collaborative scientific research and advancing knowledge relevant to neurological health and disease.",
+            "Supporting patients through comprehensive stroke evaluation, management, prevention, and long-term follow-up care.",
     },
 ];
 
@@ -253,6 +320,7 @@ const About = () => {
                     </div>
                 </div>
             </section>
+
             <section className="bg-slate-50 py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-4xl">
@@ -301,6 +369,56 @@ const About = () => {
                                     </div>
 
                                     <p className="mt-4 leading-7 text-slate-600">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-5 md:py-20">
+                <div className="mx-auto max-w-7xl px-5 lg:px-8">
+                    <div className="max-w-4xl">
+                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
+                            Leadership Training
+                        </p>
+
+                        <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+                            Advanced international leadership and neurointerventional training.
+                        </h2>
+                    </div>
+
+                    <div className="mt-5 grid gap-6 md:mt-12 md:grid-cols-2">
+                        {leadershipTraining.map((item) => {
+                            const Icon = item.icon;
+
+                            return (
+                                <div
+                                    key={item.title}
+                                    className="group rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-teal-200 hover:shadow-xl md:p-8"
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700 transition-colors group-hover:bg-teal-700 group-hover:text-white">
+                                            <Icon className="h-6 w-6" />
+                                        </div>
+
+                                        <div>
+                                            <h3 className="text-xl font-bold text-slate-950">
+                                                {item.title}
+                                            </h3>
+                                            <p className="text-sm font-medium text-teal-700">
+                                                {item.period}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <p className="mt-4 font-medium text-slate-800">
+                                        {item.institution}
+                                    </p>
+
+                                    <p className="mt-3 leading-7 text-slate-600">
                                         {item.description}
                                     </p>
                                 </div>
@@ -377,31 +495,33 @@ const About = () => {
             <section className="py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="grid gap-6 md:gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-                        <div>
-                            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
-                                Appointments & Leadership
-                            </p>
+                        <div className="lg:sticky lg:top-28 lg:self-start">
+                            <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8">
+                                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
+                                    Appointments & Leadership
+                                </p>
 
-                            <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
-                                Current professional roles.
-                            </h2>
+                                <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+                                    Current professional roles.
+                                </h2>
 
-                            <p className="mt-6 text-lg font-semibold leading-8 text-slate-900">
-                                Clinical Practice • Research • Advocacy • Health Equity
-                            </p>
+                                <p className="mt-6 text-lg font-semibold leading-8 text-slate-900">
+                                    Clinical Practice • Research • Advocacy • Health Equity
+                                </p>
 
-                            <p className="mt-6 text-lg leading-8 text-slate-600">
-                                Dr. Waweru's work spans specialist clinical practice, stroke
-                                research, public health advocacy, and health systems strengthening
-                                across Kenya and Africa.
-                            </p>
+                                <p className="mt-6 text-lg leading-8 text-slate-600">
+                                    Dr. Waweru's work spans specialist clinical practice, stroke
+                                    research, public health advocacy, and health systems
+                                    strengthening across Kenya and Africa.
+                                </p>
 
-                            <div className="mt-5 md:mt-8 space-y-4">
-                                <div className="rounded-2xl bg-slate-50 p-4">
-                                    <p className="text-2xl font-bold text-slate-950">5+</p>
-                                    <p className="text-sm text-slate-600">
-                                        Professional appointments and affiliations
-                                    </p>
+                                <div className="mt-5 md:mt-8 space-y-4">
+                                    <div className="rounded-2xl bg-slate-50 p-4">
+                                        <p className="text-2xl font-bold text-slate-950">6+</p>
+                                        <p className="text-sm text-slate-600">
+                                            Professional appointments and affiliations
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -431,6 +551,46 @@ const About = () => {
                                 </div>
                             ))}
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="awards" className="scroll-mt-28 bg-slate-50 py-5 md:py-20">
+                <div className="mx-auto max-w-7xl px-5 lg:px-8">
+                    <div className="max-w-4xl">
+                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
+                            Honours, Awards & Grants
+                        </p>
+
+                        <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+                            Recognition for academic excellence, leadership, and international
+                            exchange.
+                        </h2>
+                    </div>
+
+                    <div className="mt-5 grid gap-6 md:mt-12 md:grid-cols-2 lg:grid-cols-3">
+                        {honours.map((item) => {
+                            const Icon = item.icon;
+
+                            return (
+                                <div
+                                    key={item.title}
+                                    className="group rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-teal-200 hover:shadow-xl md:p-7"
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700 transition-colors group-hover:bg-teal-700 group-hover:text-white">
+                                            <Icon className="h-6 w-6" />
+                                        </div>
+
+                                        <h3 className="text-xl font-bold text-slate-950">
+                                            {item.title}
+                                        </h3>
+                                    </div>
+
+                                    <p className="mt-4 leading-7 text-slate-600">{item.subtitle}</p>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>

@@ -86,7 +86,7 @@ const appointments = [
 
 const Home = () => {
     return (
-        <main className="overflow-hidden bg-white">
+        <main className="bg-white">
             <SEO
                 title="Vascular Neurosurgeon & Stroke Specialist in Kenya"
                 description="Dr. Peter Waweru is a vascular and endovascular neurosurgeon, stroke specialist, and researcher advancing stroke care, neurovascular health, and health equity across Kenya and Africa."
@@ -259,8 +259,8 @@ const Home = () => {
             {/* About */}
             <section className="bg-white py-5 md:py-20">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="grid gap-12 rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4 md:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-12">
-                        <div>
+                    <div className="grid gap-6 md:gap-12 rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4 md:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:p-12">
+                        <div className="lg:sticky lg:top-28">
                             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
                                 About Dr. Waweru
                             </p>
@@ -269,7 +269,7 @@ const Home = () => {
                                 Clinical expertise shaped by research and public health impact.
                             </h2>
 
-                            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+                            <div className="mt-6 md:mt-8 grid gap-3 sm:grid-cols-3">
                                 <div className="rounded-2xl bg-white p-4 shadow-sm">
                                     <p className="text-xl font-bold text-slate-950">Stroke</p>
                                     <p className="mt-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
@@ -294,7 +294,7 @@ const Home = () => {
                         </div>
 
                         <div className="rounded-[1.5rem] bg-white p-4 shadow-sm md:p-8">
-                            <div className="space-y-6 text-lg leading-8 text-slate-600">
+                            <div className="space-y-4 md:space-y-6 text-lg leading-8 text-slate-600">
                                 <p>
                                     Stroke remains one of the leading causes of death and disability
                                     worldwide, with an increasing burden across Africa. Dr. Peter
@@ -323,47 +323,62 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Areas of Expertise */}
-            <section className="bg-slate-950 py-5 md:py-20 text-white">
-                <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="max-w-3xl">
-                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-300">
-                            Areas of Expertise
-                        </p>
-                        <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
-                            Specialized stroke and neurovascular care.
-                        </h2>
+            {/* EDNI Award Highlight */}
+            <section className="bg-slate-950 py-5 text-white md:py-20">
+                <div className="mx-auto grid max-w-7xl items-center gap-6 md:gap-10 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+                    <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-4 shadow-2xl shadow-black/20">
+                        <img
+                            src="/edni-award.png"
+                            alt="Top Scorer EDNI 2023 Award"
+                            className="h-[420px] w-full rounded-[1rem] object-cover"
+                        />
                     </div>
 
-                    <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                        {expertiseAreas.map((area) => {
-                            const Icon = area.icon;
+                    <div>
+                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-300">
+                            Award Recognition
+                        </p>
 
-                            return (
-                                <div
-                                    key={area.title}
-                                    className="rounded-3xl border border-white/10 bg-white/[0.04] p-7"
-                                >
-                                    <div className="flex items-center gap-4">
-                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-400/10 text-teal-300">
-                                            <Icon className="h-6 w-6" />
-                                        </div>
+                        <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
+                            Top Scorer, European Diploma in Neurointervention.
+                        </h2>
 
-                                        <h3 className="text-xl font-bold">{area.title}</h3>
-                                    </div>
-                                    <p className="mt-4 text-sm leading-6 text-slate-300">
-                                        {area.description}
-                                    </p>
-                                </div>
-                            );
-                        })}
+                        <p className="mt-6 text-lg leading-8 text-slate-300">
+                            Dr. Peter Waweru was recognized as the Top Scorer in the European
+                            Diploma in Neurointervention, earning the Half-Brain Award in 2023. This
+                            recognition reflects advanced competence in neurointervention,
+                            endovascular neurosurgery, and neurovascular care.
+                        </p>
+
+                        <div className="mt-8 flex flex-wrap gap-3">
+                            <span className="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-slate-200">
+                                EDNI 2023
+                            </span>
+
+                            <span className="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-slate-200">
+                                Neurointervention
+                            </span>
+
+                            <span className="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-slate-200">
+                                International Recognition
+                            </span>
+                        </div>
+                        <div className="mt-8">
+                            <Link
+                                to="/about#awards"
+                                className="inline-flex items-center rounded-full bg-teal-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-800"
+                            >
+                                View Awards & Recognition
+                                <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Research & Impact */}
             <section className="py-5 md:py-20">
-                <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-2 lg:px-8">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-12 px-5 lg:grid-cols-2 lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
                             Research & Impact
@@ -408,60 +423,46 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Appointments */}
-            <section className="bg-slate-50 py-5 md:py-20">
-                <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-                    <div>
-                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
-                            Current Appointments
+            {/* Areas of Expertise */}
+            <section className="bg-slate-950 py-5 md:py-20 text-white">
+                <div className="mx-auto max-w-7xl px-5 lg:px-8">
+                    <div className="max-w-3xl">
+                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-300">
+                            Areas of Expertise
                         </p>
-
-                        <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
-                            Clinical, research, and specialist practice roles.
+                        <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
+                            Specialized stroke and neurovascular care.
                         </h2>
-
-                        <p className="mt-6 max-w-lg text-lg leading-8 text-slate-600">
-                            Dr. Waweru contributes to stroke care through specialist clinical
-                            practice, academic research, and collaborative health systems
-                            initiatives across Kenya and Africa.
-                        </p>
                     </div>
 
-                    <div className="space-y-5">
-                        {appointments.map((item) => (
-                            <div
-                                key={item.institution}
-                                className="group rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-teal-200 hover:shadow-lg"
-                            >
-                                <div className="flex items-start justify-between gap-4">
-                                    <div>
-                                        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-700">
-                                            {item.role}
-                                        </p>
+                    <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                        {expertiseAreas.map((area) => {
+                            const Icon = area.icon;
 
-                                        <h3 className="mt-3 text-2xl font-bold text-slate-950">
-                                            {item.institution}
-                                        </h3>
+                            return (
+                                <div
+                                    key={area.title}
+                                    className="rounded-3xl border border-white/10 bg-white/[0.04] p-7"
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-400/10 text-teal-300">
+                                            <Icon className="h-6 w-6" />
+                                        </div>
 
-                                        {item.description && (
-                                            <p className="mt-4 leading-7 text-slate-600">
-                                                {item.description}
-                                            </p>
-                                        )}
+                                        <h3 className="text-xl font-bold">{area.title}</h3>
                                     </div>
-
-                                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700 transition-colors group-hover:bg-teal-700 group-hover:text-white">
-                                        <Building2 className="h-6 w-6" />
-                                    </div>
+                                    <p className="mt-4 text-sm leading-6 text-slate-300">
+                                        {area.description}
+                                    </p>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </section>
 
             {/* Stroke Awareness */}
-            <section className="py-5 md:py-20">
+            <section className="bg-slate-50 py-5 md:py-20">
                 <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:px-8">
                     <div className="rounded-[1.5rem] bg-gradient-to-br from-teal-700 to-slate-950 p-4 md:p-8 text-white">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-200">

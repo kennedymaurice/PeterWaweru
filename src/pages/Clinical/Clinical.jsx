@@ -15,36 +15,42 @@ import { personPhysicianSchema } from "../../data/schema";
 
 const clinicalAreas = [
     {
+        id: "stroke-medicine",
         title: "Stroke Care",
         description:
             "Specialist assessment and management of ischemic stroke, hemorrhagic stroke, transient ischemic attacks, recurrent stroke, and stroke complications.",
         icon: Brain,
     },
     {
+        id: "cerebrovascular-disease",
         title: "Cerebrovascular Disorders",
         description:
             "Evaluation and management of disorders affecting the blood vessels supplying the brain, including complex neurovascular conditions.",
         icon: Activity,
     },
     {
+        id: "brain-aneurysms",
         title: "Brain Aneurysms",
         description:
             "Diagnosis, risk assessment, management planning, long-term monitoring, and post-treatment follow-up for cerebral aneurysms.",
         icon: ShieldCheck,
     },
     {
+        id: "subarachnoid-haemorrhage",
         title: "Subarachnoid Haemorrhage",
         description:
             "Specialist neurosurgical assessment and care planning for patients affected by spontaneous or aneurysmal subarachnoid haemorrhage.",
         icon: AlertTriangle,
     },
     {
+        id: "neurovascular-surgery",
         title: "Neurovascular Surgery",
         description:
             "Specialized treatment planning for vascular disorders affecting the brain and nervous system, including aneurysms and vascular malformations.",
         icon: Stethoscope,
     },
     {
+        id: "stroke-prevention",
         title: "Stroke Prevention",
         description:
             "Risk assessment, education, and preventive strategies focused on reducing stroke risk and preventing recurrence.",
@@ -142,8 +148,9 @@ const Clinical = () => {
 
                             return (
                                 <div
+                                    id={area.id}
                                     key={area.title}
-                                    className="rounded-3xl border border-slate-200 bg-white p-4 md:8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/5"
+                                    className="scroll-mt-28 rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/5 md:p-8"
                                 >
                                     <div className="flex items-center gap-4">
                                         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-teal-700/10 text-teal-700">

@@ -87,14 +87,85 @@ const publications = [
             "A multicentre Kenyan study evaluating mortality and functional outcomes among patients with spontaneous subarachnoid haemorrhage.",
         tags: ["Neurosurgery", "SAH", "Outcomes"],
     },
+    {
+        title: "Global Impact of the COVID-19 Pandemic on Stroke Volumes and Cerebrovascular Events: A 1-Year Follow-up",
+        journal: "Neurology",
+        url: "https://n.neurology.org/content/100/4/e408",
+        abstractUrl: "https://pubmed.ncbi.nlm.nih.gov/36400492/",
+        citation:
+            "Nguyen TN, Qureshi MM, Klein P, Yamagami H, Mikulik R, Czlonkowska A, et al. Global Impact of the COVID-19 Pandemic on Stroke Volumes and Cerebrovascular Events: A 1-Year Follow-up. Neurology. 2023;100(4):e408-e421. doi:10.1212/WNL.0000000000201426",
+        year: "2023",
+        summary:
+            "An international collaborative study evaluating the ongoing impact of the COVID-19 pandemic on stroke presentations, stroke volumes, and cerebrovascular events across multiple healthcare systems worldwide.",
+        tags: ["COVID-19", "Stroke", "Global Health"],
+    },
+    {
+        title: "Isolated Septic Non-Otogenic Lateral Sinus Thrombosis Complicating Nasopharyngitis in a 2-Month-Old Infant: A Case Report",
+        journal: "BJR Case Reports",
+        url: "https://www.birpublications.org/doi/10.1259/bjrcr.20170053",
+        abstractUrl: "https://pubmed.ncbi.nlm.nih.gov/30363284/",
+        citation:
+            "Waweru P, Wakonyo A, Dossajee H, Reel B. Isolated septic non-otogenic lateral sinus thrombosis complicating nasopharyngitis in a 2-month-old infant: a case report. BJR Case Reports. 2017;3(4):20170053. doi:10.1259/bjrcr.20170053",
+        year: "2017",
+        summary:
+            "A rare pediatric neurosurgical and infectious disease case highlighting the diagnosis and management of septic lateral sinus thrombosis in infancy.",
+        tags: ["Pediatrics", "Neurosurgery", "Case Report"],
+    },
+    {
+        title: "Protracted Refractory Pain Post-TEVAR: Post-Implantation Syndrome?",
+        journal: "Journal of Surgical Case Reports",
+        url: "https://academic.oup.com/jscr/article/2016/10/rjw173/2623786",
+        abstractUrl: "https://pubmed.ncbi.nlm.nih.gov/27843662/",
+        citation:
+            "Waweru P, Gill H, Abeid C. Protracted refractory pain post-TEVAR: post-implantation syndrome? Journal of Surgical Case Reports. 2016;2016(10):rjw173. doi:10.1093/jscr/rjw173",
+        year: "2016",
+        summary:
+            "A vascular surgery case report exploring persistent postoperative pain following thoracic endovascular aortic repair and its possible association with post-implantation syndrome.",
+        tags: ["Vascular Surgery", "TEVAR", "Case Report"],
+    },
+    {
+        title: "Conservative Management of an Iatrogenic Esophageal Tear in Kenya",
+        journal: "Case Reports in Surgery",
+        url: "https://www.hindawi.com/journals/cris/2015/102540/",
+        abstractUrl: "https://pubmed.ncbi.nlm.nih.gov/26495148/",
+        citation:
+            "Waweru P, Mwaniki D. Conservative Management of an Iatrogenic Esophageal Tear in Kenya. Case Reports in Surgery. 2015;2015:102540. doi:10.1155/2015/102540",
+        year: "2015",
+        summary:
+            "A surgical case report demonstrating successful non-operative management of an iatrogenic esophageal perforation in a resource-limited setting.",
+        tags: ["Surgery", "Esophageal Injury", "Case Report"],
+    },
+    {
+        title: "Complicated Malaria and a Covert Ruptured Spleen: A Case Report",
+        journal: "Journal of Surgical Case Reports",
+        url: "https://academic.oup.com/jscr/article/2014/11/rju122/2282436",
+        abstractUrl: "https://pubmed.ncbi.nlm.nih.gov/25368164/",
+        citation:
+            "Waweru P, Macleod J, Gikonyo A. Complicated malaria and a covert ruptured spleen: a case report. Journal of Surgical Case Reports. 2014;2014(11):rju122. doi:10.1093/jscr/rju122",
+        year: "2014",
+        summary:
+            "A clinical case highlighting the diagnostic challenges associated with splenic rupture complicating severe malaria.",
+        tags: ["Malaria", "Surgery", "Case Report"],
+    },
 ];
 
-const categories = [
+const categoriesw = [
     "Stroke Awareness",
     "Stroke Epidemiology",
     "Systems of Care",
     "Neurovascular Surgery",
     "Health Equity",
+];
+
+const categories = [
+    "Stroke Medicine",
+    "Stroke Systems",
+    "Neurosurgery",
+    "Neurointervention",
+    "Public Health",
+    "Health Systems",
+    "Global Health",
+    "Case Reports",
 ];
 
 const profiles = [

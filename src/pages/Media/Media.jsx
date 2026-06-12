@@ -58,6 +58,45 @@ const speakingTopics = [
     },
 ];
 
+const featuredPresentations = [
+    {
+        year: "2024",
+        event: "1st Stroke Symposium, Nairobi, Kenya",
+        role: "Organizer & Presenter",
+        title: "Framework for Organization of Comprehensive and Primary Stroke Services in Kenya",
+    },
+    {
+        year: "2024",
+        event: "World Stroke Organization Future Leaders Meeting, Abu Dhabi, UAE",
+        role: "Presenter",
+        title: "Stroke Advocacy Pitch to Local Government Representatives",
+    },
+    {
+        year: "2024",
+        event: "KUTRRH Stroke Awareness Day, Nairobi, Kenya",
+        role: "Presenter",
+        title: "Management and Outcomes of Subarachnoid Hemorrhage in Nairobi, Kenya",
+    },
+    {
+        year: "2024",
+        event: "AIC Kijabe Hospital Research Day",
+        role: "Poster Presentation",
+        title: "Validation of the Swahili Translation of the National Institute of Health Stroke Scale (NIHSS)",
+    },
+    {
+        year: "2022",
+        event: "2nd COSECSA Scientific Conference, Windhoek, Namibia",
+        role: "Presenter",
+        title: "Stroke Revascularization Strategies in Low Resource Settings",
+    },
+    {
+        year: "2022",
+        event: "Continental Association of African Neurological Societies",
+        role: "Presenter",
+        title: "Mechanical Thrombectomy in Nairobi, Kenya",
+    },
+];
+
 const availableFor = [
     { title: "Keynote Addresses", icon: Mic },
     { title: "Conferences", icon: Presentation },
@@ -148,7 +187,7 @@ const Media = () => {
                     <div className="rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-4 shadow-2xl shadow-black/20">
                         <div className="relative overflow-hidden rounded-[1.5rem]">
                             <img
-                                src="/peter-speaking.webp"
+                                src="/waweru.webp"
                                 alt="Dr. Peter Waweru speaking at a conference"
                                 className="h-[420px] w-full object-cover"
                             />
@@ -265,6 +304,54 @@ const Media = () => {
                                 </div>
                             );
                         })}
+                    </div>
+                </div>
+            </section>
+
+            <section className="bg-slate-100 py-5 md:py-20">
+                <div className="mx-auto max-w-7xl px-5 lg:px-8">
+                    <div className="max-w-4xl">
+                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-teal-700">
+                            Featured Presentations
+                        </p>
+
+                        <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+                            Contributing to stroke science, advocacy, and professional dialogue.
+                        </h2>
+
+                        <p className="mt-6 text-lg leading-8 text-slate-600">
+                            Dr. Waweru regularly contributes to scientific conferences, stroke
+                            symposia, research meetings, and professional forums focused on
+                            improving stroke care, neurovascular services, and health systems across
+                            Africa and beyond.
+                        </p>
+                    </div>
+
+                    <div className="mt-12 space-y-5">
+                        {featuredPresentations.map((item) => (
+                            <div
+                                key={`${item.year}-${item.title}`}
+                                className="rounded-3xl border border-slate-200 bg-white p-4 md:p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                            >
+                                <div className="flex flex-wrap items-center gap-3">
+                                    <span className="rounded-full bg-teal-700/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-teal-700">
+                                        {item.year}
+                                    </span>
+
+                                    <span className="text-sm font-semibold text-slate-500">
+                                        {item.role}
+                                    </span>
+                                </div>
+
+                                <h3 className="mt-5 text-2xl font-bold text-slate-950">
+                                    {item.title}
+                                </h3>
+
+                                <p className="mt-3 text-lg font-medium text-teal-700">
+                                    {item.event}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

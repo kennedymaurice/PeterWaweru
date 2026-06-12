@@ -15,6 +15,7 @@ import Collaborations from "./pages/Collaborations/Collaborations";
 import Contact from "./pages/Contact/Contact";
 import Gallery from "./pages/Gallery/Gallery";
 import NotFound from "./pages/NotFound/NotFound";
+import ScrollToHash from "./components/layout/ScrollToHash";
 
 function App() {
     const [isLoading, setIsLoading] = useState(true);
@@ -33,6 +34,7 @@ function App() {
 
     return (
         <BrowserRouter>
+            <ScrollToHash />
             <ScrollToTop />
             <Routes>
                 <Route element={<MainLayout />}>
